@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      locale: Locale('fr'),
+      locale: Locale('en'),
       initialRoute: RoutesKeys.loginPage,
       onGenerateRoute: RouteGenerator.generateRoute,
     );
