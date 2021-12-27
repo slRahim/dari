@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:dari/generated/l10n.dart';
+import 'package:dari/helpers/helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -13,9 +14,7 @@ class LoginApp extends StatefulWidget {
 
 class _LoginAppState extends State<LoginApp> {
   TextEditingController textEditingController = TextEditingController();
-  // ..text = "123456";
 
-  // ignore: close_sinks
   StreamController<ErrorAnimationType>? errorController;
 
   bool hasError = false;
@@ -34,15 +33,8 @@ class _LoginAppState extends State<LoginApp> {
     super.dispose();
   }
 
-  // snackBar Widget
-  snackBar(String? message) {
-    return ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message!),
-        duration: Duration(seconds: 2),
-      ),
-    );
-  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -167,7 +159,7 @@ class _LoginAppState extends State<LoginApp> {
                   style: TextStyle(color: Colors.black54, fontSize: 15),
                 ),
                 TextButton(
-                    onPressed: () => snackBar("OTP resend!!"),
+                    onPressed: () =>ScaffoldMessenger.of(context).showSnackBar(Helpers.snackBar("OTP ERROR !")),
                     child: Text(
                       "SCAN",
                       style: TextStyle(
@@ -197,7 +189,7 @@ class _LoginAppState extends State<LoginApp> {
                       setState(
                             () {
                           hasError = false;
-                          snackBar("OTP Verified!!");
+                          ScaffoldMessenger.of(context).showSnackBar(Helpers.snackBar("OTP Verified !"));
                         },
                       );
                     }

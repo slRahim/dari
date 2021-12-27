@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       locale: Locale('en'),
-      initialRoute: RoutesKeys.loginPage,
+      initialRoute: RoutesKeys.homePage,
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
