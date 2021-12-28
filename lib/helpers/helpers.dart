@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:map_launcher/map_launcher.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Helpers {
 
@@ -11,6 +12,14 @@ class Helpers {
         duration: Duration(seconds: 3),
       )
     );
+  }
+
+  static void showToast(String message) {
+    Fluttertoast.showToast(
+        msg: message,
+        toastLength: Toast.LENGTH_LONG,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1);
   }
 
   static openMapsSheet(context, final Coords coords) async {
