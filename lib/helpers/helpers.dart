@@ -5,6 +5,10 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 class Helpers {
 
+  static Widget buildLoading() {
+    return Center(child: CircularProgressIndicator());
+  }
+
   static SnackBar snackBar(String? message) {
     return (
       SnackBar(
