@@ -5,6 +5,7 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:dari/helpers/helpers.dart';
 import 'package:dari/helpers/statics.dart';
 import 'package:dari/widget/blue700clipper.dart';
+import 'package:dari/widget/home_app_bar.dart';
 import 'package:dari/widget/home_item_model.dart';
 import 'package:dari/widget/home_item_widget.dart';
 import 'package:dari/widget/pinkclipper.dart';
@@ -29,6 +30,8 @@ class _HomeState extends State<Home> {
   PageController _pageController = PageController();
   DateTime? currentBackPressTime;
 
+  final _formKey = GlobalKey<FormState>();
+
   List<HomeItemModel> homeItemsModels = [
     homeItemSonatrach,
     homeItemSonelgaz,
@@ -49,93 +52,189 @@ class _HomeState extends State<Home> {
     super.dispose();
   }
 
-
   Widget homeTab(context) {
-    return Container(
-      child: Stack(
-        children: [
-          ClipPath(
-            clipper: PinkClipper(),
-            child: Container(
-              color: Colors.pink.withOpacity(0.7),
-            ),
-          ),
-          ClipPath(
-            clipper: BlueClipper(),
-            child: Container(
-              color: Colors.blue[700],
-            ),
-          ),
-          Container(
-            margin: EdgeInsetsDirectional.only(top: 40),
-            padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
-            color: Colors.transparent,
-            width: MediaQuery.of(context).size.width,
-            height: 150,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: (MediaQuery.of(context).orientation ==
-                          Orientation.landscape)
-                      ? EdgeInsets.only(
-                          bottom: MediaQuery.of(context).size.height / 50)
-                      : EdgeInsets.only(
-                          top: MediaQuery.of(context).size.height / 15),
-                  child: Text(
-                    "GLOBAL ALGERIAN \n TECHNOLOGY",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, RoutesKeys.settingsPage);
-                    },
-                    icon: Icon(
-                      CupertinoIcons.settings,
-                      color: Colors.white,
-                      size: 30,
-                    ))
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsetsDirectional.only(
-                top: MediaQuery.of(context).size.height / 3,
-                start: 10,
-                end: 10),
-            child: DragAbleGridView(
-              mainAxisSpacing: 0.0,
-              crossAxisSpacing: 0.0,
-              crossAxisCount: 2,
-              itemBins: homeItemsModels,
-              editSwitchController: editSwitchController,
-              isOpenDragAble: true,
-              animationDuration: 300,
-              //milliseconds
-              longPressDuration: 800,
-              //milliseconds
-              child: (int position) {
-                return HomeItemWidget(homeItemModel : homeItemsModels[position]);
-              },
-            ),
-          )
-        ],
+    return HomeAppBar(
+      child: Container(
+        margin: EdgeInsetsDirectional.only(
+            top: MediaQuery.of(context).size.height / 3, start: 10, end: 10),
+        child: DragAbleGridView(
+          mainAxisSpacing: 0.0,
+          crossAxisSpacing: 0.0,
+          crossAxisCount: 2,
+          itemBins: homeItemsModels,
+          editSwitchController: editSwitchController,
+          isOpenDragAble: true,
+          animationDuration: 300,
+          //milliseconds
+          longPressDuration: 800,
+          //milliseconds
+          child: (int position) {
+            return HomeItemWidget(homeItemModel: homeItemsModels[position]);
+          },
+        ),
       ),
     );
   }
 
-  Widget aboutTab() {
-    return Container(
-      color: Colors.red,
+  Widget contactTab(context) {
+    return HomeAppBar(
+      child: Container(
+        margin: EdgeInsetsDirectional.only(
+            top: MediaQuery.of(context).size.height / 3, start: 10, end: 10),
+        child: Column(
+          children: [
+            Form(
+                key: _formKey,
+                child: Wrap(
+                  spacing: 13,
+                  runSpacing: 13,
+                  children: [
+                    TextFormField(
+                      // controller: _refControl,
+                      keyboardType: TextInputType.emailAddress,
+                      validator: (value) {
+                        String pattern =
+                            r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
+                            r"{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]"
+                            r"{0,253}[a-zA-Z0-9])?)*$";
+                        RegExp regex = RegExp(pattern);
+                        if (value!.isEmpty || !regex.hasMatch(value)) {
+                          return 'Enter a valid email address';
+                        }
+                        return null;
+                      },
+                      decoration: InputDecoration(
+                        labelText: "Your Mail",
+                        prefixIcon: Icon(
+                          CupertinoIcons.at,
+                          color: Colors.blue,
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue),
+                            borderRadius: BorderRadius.circular(5)),
+                        enabledBorder: OutlineInputBorder(
+                          gapPadding: 3.3,
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: BorderSide(color: Colors.blue),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          gapPadding: 3.3,
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: BorderSide(color: Colors.red),
+                        ),
+                      ),
+                    ),
+                    TextFormField(
+                      // controller: _refControl,
+                      keyboardType: TextInputType.text,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Enter a valid text';
+                        }
+                        return null;
+                      },
+                      decoration: InputDecoration(
+                        labelText: "Object",
+                        prefixIcon: Icon(
+                          CupertinoIcons.scribble,
+                          color: Colors.blue,
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue),
+                            borderRadius: BorderRadius.circular(5)),
+                        enabledBorder: OutlineInputBorder(
+                          gapPadding: 3.3,
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: BorderSide(color: Colors.blue),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          gapPadding: 3.3,
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: BorderSide(color: Colors.red),
+                        ),
+                      ),
+                    ),
+                    TextFormField(
+                      // controller: _refControl,
+                      keyboardType: TextInputType.multiline,
+                      maxLines: 5,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return "S.current.msg_champ_oblg";
+                        }
+                        return null;
+                      },
+                      decoration: InputDecoration(
+                        labelText: "Message",
+                        alignLabelWithHint: true,
+                        hintText: "Your text here !",
+                        prefixIcon: Icon(
+                          CupertinoIcons.text_justify,
+                          color: Colors.blue,
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue),
+                            borderRadius: BorderRadius.circular(5)),
+                        enabledBorder: OutlineInputBorder(
+                          gapPadding: 3.3,
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: BorderSide(color: Colors.blue),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          gapPadding: 3.3,
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: BorderSide(color: Colors.red),
+                        ),
+                      ),
+                    ),
+                  ],
+                )),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 16.0, horizontal: 30),
+              child: ButtonTheme(
+                height: 50,
+                child: TextButton(
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      Helpers.showToast("success");
+                    } else {
+                      Helpers.showToast("{S.current.msg_champs_obg}");
+                    }
+                  },
+                  child: Center(
+                      child: Text(
+                    "send".toUpperCase(),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  )),
+                ),
+              ),
+              decoration: BoxDecoration(
+                  color: Colors.pink,
+                  borderRadius: BorderRadius.circular(5),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.pink.shade200,
+                        offset: Offset(1, -2),
+                        blurRadius: 5),
+                    BoxShadow(
+                        color: Colors.pink.shade200,
+                        offset: Offset(-1, 2),
+                        blurRadius: 5)
+                  ]),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
-  Widget mapTab() {
+  Widget mapTab(context) {
     return FlutterMap(
       options: MapOptions(
         zoom: 10,
@@ -167,9 +266,158 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget contactTab() {
-    return Container(
-      color: Colors.blue,
+  Widget aboutTab(context) {
+    return HomeAppBar(
+      child: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsetsDirectional.only(
+              top: MediaQuery.of(context).size.height / 3, start: 10, end: 10),
+          padding: EdgeInsetsDirectional.fromSTEB(15, 10, 15, 10),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text("Our Mission" , style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text("  Electrical " , textAlign: TextAlign.start, style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 5,),
+              Row(
+                children: [
+                  Text("  instrumentation" , style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 5,),
+              Row(
+                children: [
+                  Text("  Automation" , style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 5,),
+              Row(
+                children: [
+                  Text("  Electronic maintenance " , style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 5,),
+              Row(
+                children: [
+                  Text("  3D scanning" , style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Generale" , style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Founded 2019" , textAlign: TextAlign.start, style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 5,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Company size 51-200 employees" , style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 5,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Zone D'Activité baba ali Shaoula,Alger" , style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 5,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Usine de production" , style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text("Contact" , style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Icon(CupertinoIcons.phone),
+                  Text(" 000-000-000-000" , textAlign: TextAlign.start, style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 5,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Icon(Icons.article_outlined),
+                  Text(" 000-000-000-000" , textAlign: TextAlign.start, style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+              SizedBox(height: 5,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Icon(CupertinoIcons.globe),
+                  Text(" gatech.amenhyd.com" , textAlign: TextAlign.start, style: TextStyle(
+                    fontSize: 16,
+                  ),),
+                ],
+              ),
+
+            ],
+          ),
+        ),
+      ),
     );
   }
 
@@ -194,9 +442,9 @@ class _HomeState extends State<Home> {
           },
           children: <Widget>[
             homeTab(context),
-            aboutTab(),
-            mapTab(),
-            contactTab(),
+            contactTab(context),
+            mapTab(context),
+            aboutTab(context),
           ],
         ),
         bottomNavigationBar: BottomNavyBar(
@@ -209,11 +457,11 @@ class _HomeState extends State<Home> {
             BottomNavyBarItem(
                 title: Text('Home'), icon: Icon(CupertinoIcons.house_alt)),
             BottomNavyBarItem(
-                title: Text('About us'), icon: Icon(CupertinoIcons.book)),
+                title: Text('Contact us'), icon: Icon(CupertinoIcons.mail)),
             BottomNavyBarItem(
                 title: Text('Map'), icon: Icon(CupertinoIcons.map)),
             BottomNavyBarItem(
-                title: Text('Contact us'), icon: Icon(CupertinoIcons.mail)),
+                title: Text('About us'), icon: Icon(CupertinoIcons.book)),
           ],
         ),
       ),

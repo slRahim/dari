@@ -163,7 +163,7 @@ class _LoginAppState extends State<LoginApp> {
                     child: Text(
                       "SCAN",
                       style: TextStyle(
-                          color: Color(0xFF91D3B3),
+                          color: Colors.blue,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
                     ))
@@ -205,15 +205,15 @@ class _LoginAppState extends State<LoginApp> {
                 ),
               ),
               decoration: BoxDecoration(
-                  color: Colors.green.shade300,
+                  color: Colors.blue.shade700,
                   borderRadius: BorderRadius.circular(5),
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.green.shade200,
+                        color: Colors.blue.shade300,
                         offset: Offset(1, -2),
                         blurRadius: 5),
                     BoxShadow(
-                        color: Colors.green.shade200,
+                        color: Colors.blue.shade300,
                         offset: Offset(-1, 2),
                         blurRadius: 5)
                   ]),
