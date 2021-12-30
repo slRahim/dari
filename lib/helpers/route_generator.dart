@@ -6,6 +6,7 @@ import 'package:dari/ui/listing_ui.dart';
 import 'package:dari/ui/login_app.dart';
 import 'package:dari/ui/map.dart';
 import 'package:dari/ui/settings.dart';
+import 'package:dari/ui/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
@@ -14,6 +15,11 @@ class RouteGenerator {
     final args = settings.arguments;
 
     switch (settings.name) {
+      case RoutesKeys.splashScreen:
+        return MaterialPageRoute(
+          builder: (_) => SplashScreen(),
+        );
+        break;
       case RoutesKeys.introPage:
         return MaterialPageRoute(
           builder: (_) => IntroPage(),

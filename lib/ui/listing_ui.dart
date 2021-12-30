@@ -1,8 +1,11 @@
+import 'package:draggable_home/draggable_home.dart';
+import 'package:expansion_card/expansion_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 
 class ListingPage extends StatefulWidget {
-  const ListingPage({Key? key}) : super(key: key);
+  final String? title ;
+  const ListingPage({Key? key ,  this.title}) : super(key: key);
 
   @override
   _ListingPageState createState() => _ListingPageState();
@@ -11,50 +14,64 @@ class ListingPage extends StatefulWidget {
 class _ListingPageState extends State<ListingPage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(
-        title:  Text("Listing page Demo"),
-      ),
-      body: OfflineBuilder(
-        connectivityBuilder: (
-            BuildContext context,
-            ConnectivityResult connectivity,
-            Widget child,
-            ) {
-          final bool connected = connectivity != ConnectivityResult.none;
-          return new Stack(
-            fit: StackFit.expand,
-            children: [
-              Positioned(
-                height: 24.0,
-                left: 0.0,
-                right: 0.0,
-                child: Container(
-                  color: connected ? Color(0xFF00EE44) : Color(0xFFEE4400),
-                  child: Center(
-                    child: Text("${connected ? 'ONLINE' : 'OFFLINE'}"),
-                  ),
+    return DraggableHome(
+      leading: Icon(Icons.arrow_back_ios , color: Colors.white,),
+      title: Text("Draggable Home"),
+      headerWidget: headerWidget(context),
+      headerExpandedHeight: 0.4,
+      body: [
+        listView(),
+      ],
+      fullyStretchable: true,
+    );
+  }
+
+
+  Container headerWidget(BuildContext context) => Container(
+    color: Colors.black54,
+    child: Center(
+      child: Image.asset("assets/sonatrach.png" , width: 150, height: 150,),
+    ),
+  );
+
+  Widget listView() {
+    return SingleChildScrollView(
+      padding: EdgeInsets.all(15),
+      child: Column(
+        children: [
+          Container(
+            color: Colors.blue,
+            child: ExpansionCard(
+              borderRadius: 30,
+              backgroundColor: Colors.pink,
+              title: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "Header",
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      "Sub",
+                      style: TextStyle(fontSize: 20, color: Colors.black),
+                    ),
+                  ],
                 ),
               ),
-              Center(
-                child: new Text(
-                  'Yay!',
-                ),
-              ),
-            ],
-          );
-        },
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Text(
-              'There are no bottons to push :)',
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 7),
+                  child: Text("Content goes over here !",
+                      style: TextStyle(fontSize: 20, color: Colors.black)),
+                )
+              ],
             ),
-            new Text(
-              'Just turn off your internet.',
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

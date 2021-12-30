@@ -52,7 +52,6 @@ dependencies:
   draggable_home: ^1.0.2
   awesome_dialog: ^2.1.2
 
-  day_night_switcher: ^0.2.0+1
   babstrap_settings_screen: ^0.1.1
 
   introduction_screen: ^2.1.0
@@ -96,6 +95,7 @@ flutter:
    - assets/ade.png
    - assets/glucometer.png
    - assets/gatech_logo.png
+   - assets/gatech_logo_s.png
 
 
 
@@ -126,3 +126,33 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 flutter_intl:
   enabled: true
+
+splash_screen_view:
+  # Use color to set the background of your splash screen to a solid color.
+  # Use background_image to set the background of your splash screen to a png image.
+  # This is useful for gradients. The image will be stretch to the  size of the app.
+  # Only one parameter can be used, color and background_image cannot both be set.
+
+  color: "#ffffff"
+  #background_image: "assets/gatech_logo.png"
+
+  # Optional parameters are listed below.
+  image: assets/gatech_logo_s.png
+
+  color_dark: "#ffffff"
+  #background_image_dark: "assets/dark-background.png"
+  #image_dark: assets/splash-invert.png
+
+  #android: false
+  #ios: false
+  #web: false
+
+  #android_gravity: center
+  #ios_content_mode: center
+  #web_image_mode: center
+
+  #fullscreen: true
+
+  #info_plist_files:
+  #  - 'ios/Runner/Info-Debug.plist'
+  #  - 'ios/Runner/Info-Release.plist'

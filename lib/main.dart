@@ -2,6 +2,7 @@ import 'package:dari/helpers/statics.dart';
 import 'package:dari/ui/login_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:splash_screen_view/SplashScreenView.dart';
 
 import 'generated/l10n.dart';
 import 'helpers/route_generator.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       locale: Locale('en'),
-      initialRoute: RoutesKeys.loginPage,
+      initialRoute: RoutesKeys.splashScreen,
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }

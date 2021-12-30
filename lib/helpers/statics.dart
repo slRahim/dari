@@ -24,4 +24,5 @@ class RoutesKeys {
   static const settingsPage = '/settingsPage';
   static const contactPage = '/ContactPage';
   static const mapPage = "/mapPage";
+  static const splashScreen = "/splashScreen" ;
 }

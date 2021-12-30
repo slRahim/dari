@@ -172,6 +172,18 @@ class _SettingsPageState extends State<SettingsPage> {
                 onTap: () {
 
                 },
+                icons: CupertinoIcons.star,
+                iconStyle: IconStyle(
+                  iconsColor: Colors.white,
+                  backgroundColor: Colors.yellow.shade700,
+                ),
+                title: 'Rate',
+                subtitle: "Leave your feedback",
+              ),
+              SettingsItem(
+                onTap: () {
+
+                },
                 icons: Icons.info_rounded,
                 iconStyle: IconStyle(
                   backgroundColor: Colors.purple,
