@@ -76,16 +76,14 @@ class _HomeState extends State<Home> {
   }
 
   Widget contactTab(context) {
-    return HomeAppBar(
+    return const HomeAppBar(
       child: ContactPage(),
     );
   }
 
   Widget aboutTab(context) {
-    return HomeAppBar(
-      child: SingleChildScrollView(
-        child: AboutPage(),
-      ),
+    return const HomeAppBar(
+      child: AboutPage(),
     );
   }
 
@@ -139,11 +137,6 @@ class _HomeState extends State<Home> {
   Future<bool> _onWillPop() async {
     DateTime now = DateTime.now();
 
-    //  if (GridHomeWidget.Global_Draggable_Mode &&
-    //     _currentHomeState != null &&
-    //     (_currentHomeState is HomeLoaded || _currentHomeState is HomeInitial)) {
-    //   return Future.value(true);
-    // } else {
     if (currentBackPressTime == null ||
         now.difference(currentBackPressTime!) > Duration(seconds: 3)) {
       currentBackPressTime = now;
@@ -162,7 +155,7 @@ class _HomeState extends State<Home> {
       btnOkOnPress: () async {
         exit(0);
       },
-    )..show();
+    ).show();
     return Future.value(false);
   }
 }

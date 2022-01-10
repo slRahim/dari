@@ -11,7 +11,6 @@ class Statics {
   static List<String> themeStyle = [
    S.current.light_theme,
     S.current.dark_them,
-   S.current.sys_theme
   ];
 }
 

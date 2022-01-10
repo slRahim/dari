@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:local_auth/auth_strings.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:local_auth/local_auth.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginApp extends StatefulWidget {
   const LoginApp({Key? key}) : super(key: key);
@@ -29,10 +30,22 @@ class _LoginAppState extends State<LoginApp> {
   var localAuth = LocalAuthentication();
   DateTime? currentBackPressTime;
 
+  SharedPreferences? _prefs;
+  String _codepin = "";
+
   @override
   void initState() {
     errorController = StreamController<ErrorAnimationType>();
+    futureInit() ;
     super.initState();
+  }
+
+  futureInit() async {
+    _prefs = await SharedPreferences.getInstance();
+    String? res = _prefs!.getString("codepin");
+    if (res != null && res.isNotEmpty) {
+      _codepin = res;
+    }
   }
 
   @override
@@ -192,7 +205,7 @@ class _LoginAppState extends State<LoginApp> {
                   child: TextButton(
                     onPressed: () {
                       formKey.currentState!.validate();
-                      if (currentText.length != 4 || currentText != "1234") {
+                      if (currentText.length != 4 || currentText != _codepin) {
                         errorController!.add(ErrorAnimationType
                             .shake); // Triggering error shake animation
                         setState(() => hasError = true);

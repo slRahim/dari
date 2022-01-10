@@ -36,10 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.4
   intl: ^0.17.0
 
-  firebase_core: ^1.10.6
-  firebase_analytics: ^9.0.4
-  firebase_crashlytics: ^2.4.4
-  firebase_messaging: ^11.2.4
+  firebase_core: ^1.11.0
+  firebase_analytics: ^9.0.5
+  firebase_crashlytics: ^2.4.5
+  firebase_messaging: ^11.2.5
 
   dragablegridview_flutter: ^0.2.5
   fluttertoast: ^8.0.8
@@ -47,9 +47,9 @@ dependencies:
   flutter_offline: ^2.0.0
   url_launcher: ^6.0.17
 
-  expansion_card: ^0.1.0
+
   bottom_navy_bar: ^6.0.0
-  draggable_home: ^1.0.2
+  folding_cell: ^1.0.2
   awesome_dialog: ^2.1.2
 
   babstrap_settings_screen: ^0.1.1
@@ -89,15 +89,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-   - assets/otp.gif
-   - assets/sonelgaz.png
-   - assets/sonatrach.png
-   - assets/ade.png
-   - assets/glucometer.png
-   - assets/gatech_logo.png
-   - assets/gatech_logo_s.png
-
-
+   - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

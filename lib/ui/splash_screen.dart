@@ -1,3 +1,4 @@
+import 'package:dari/generated/l10n.dart';
 import 'package:dari/ui/home.dart';
 import 'package:dari/ui/intro_page.dart';
 import 'package:dari/ui/login_app.dart';
@@ -14,7 +15,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SpalshScreenState extends State<SplashScreen> {
   bool finishLoading = false;
-
+  List<Locale> localeList = [Locale('en'), Locale('fr'), Locale('ar_DZ')];
   int? _introScreen;
   int? _loginscreen;
 
@@ -35,6 +36,35 @@ class _SpalshScreenState extends State<SplashScreen> {
 
     _introScreen = _prefs!.getInt("intro");
     _loginscreen = _prefs!.getInt("login");
+    String ?_locale = _prefs!.getString("myLocale");
+    String ?_theme = _prefs!.getString("myStyle");
+
+    switch (_locale) {
+      case ("en"):
+        await S.load(Locale('en'));
+        break;
+      case ("fr"):
+        await S.load(Locale('fr'));
+        break;
+      case ("ar"):
+        await S.load(Locale('ar_DZ'));
+        break;
+      default:
+        await S.load(Locale('en'));
+        break;
+    }
+    switch (_theme) {
+      case ("light"):
+
+        break;
+      case ("dark"):
+
+        break;
+      default:
+
+        break;
+    }
+
   }
 
   @override
