@@ -36,7 +36,7 @@ class RouteGenerator {
         );
       case RoutesKeys.listItems:
         return MaterialPageRoute(
-            builder: (_) => ListingPage()
+            builder: (_) => ListingPage(argument: args,)
         );
       case RoutesKeys.settingsPage:
         return MaterialPageRoute(

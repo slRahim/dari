@@ -13,19 +13,19 @@ class HomeItemModel extends DragAbleGridViewBin{
   HomeItemModel({required this.id, required this.title, required this.image});
 }
 
-HomeItemModel homeItemSonatrach = new HomeItemModel(
+HomeItemModel homeItemSonatrach = HomeItemModel(
     id: homeItemSonatrachId,
     title: "Sonatrach",
     image: "assets/sonatrach.png");
-HomeItemModel homeItemSonelgaz = new HomeItemModel(
+HomeItemModel homeItemSonelgaz = HomeItemModel(
     id: homeItemSonelgazId,
     title: "Sonelgaz",
     image: "assets/sonelgaz.png");
-HomeItemModel homeItemAde = new HomeItemModel(
+HomeItemModel homeItemAde = HomeItemModel(
     id: homeItemAdeId,
     title: "Ade",
     image: "assets/ade.png");
-HomeItemModel homeItemVitalCheck = new HomeItemModel(
+HomeItemModel homeItemVitalCheck = HomeItemModel(
     id: homeItemVitalCheckId,
     title: "VitalChekc",
     image: "assets/glucometer.png");

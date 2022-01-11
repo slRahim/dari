@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "930107122540",
+    "project_id": "gatechportal",
+    "storage_bucket": "gatechportal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930107122540:android:4094debf835e353ed54949",
+        "android_client_info": {
+          "package_name": "com.gatech.dari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "930107122540-dne4epmii7k6sno4843fr5b5v0gvnde1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVyFt15zcdrhtDHU-p7fsdN5_DY6kLfA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "930107122540-dne4epmii7k6sno4843fr5b5v0gvnde1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

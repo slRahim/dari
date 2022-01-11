@@ -18,15 +18,15 @@ class _HomeItemWidgetState extends State<HomeItemWidget> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-         Navigator.pushNamed(context, RoutesKeys.listItems);
+         Navigator.pushNamed(context, RoutesKeys.listItems , arguments: widget.homeItemModel);
       },
       child: Container(
         width: 170,
         height: 170,
-        padding: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 5.0),
+        padding: const EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 5.0),
         decoration: BoxDecoration(
           color: _containerColor,
-          borderRadius: BorderRadius.all(Radius.circular(3.0)),
+          borderRadius: const BorderRadius.all(Radius.circular(3.0)),
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.1),
@@ -37,17 +37,17 @@ class _HomeItemWidgetState extends State<HomeItemWidget> {
           ],
         ),
         //Because this layout and the delete_Icon are in the same Stack, setting marginTop and marginRight will make the icon in the proper position.
-        margin: EdgeInsets.only(top: 6.0, right: 6.0),
+        margin: const EdgeInsets.only(top: 6.0, right: 6.0),
         child: Column(
           children: [
             Image.asset(
               widget.homeItemModel.image,
               width: 100, height: 100,
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Text(
               widget.homeItemModel.title,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 16.0, fontWeight: FontWeight.bold),
             ),
           ],

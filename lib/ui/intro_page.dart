@@ -97,7 +97,7 @@ class _IntroPageState extends State<IntroPage> {
   Widget build(BuildContext context) {
     const bodyStyle = TextStyle(fontSize: 19.0);
 
-    const pageDecoration = const PageDecoration(
+    const pageDecoration = PageDecoration(
       titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
       bodyTextStyle: bodyStyle,
       descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
@@ -113,24 +113,23 @@ class _IntroPageState extends State<IntroPage> {
           title: "Fractional shares",
           body:
           "Instead of having to buy an entire share, invest any amount you want.",
-          image: _buildImage('otp.gif'),
+          image: _buildImage('automation.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Fractional shares",
           body:
           "Instead of having to buy an entire share, invest any amount you want.",
-          image: _buildImage('otp.gif'),
+          image: _buildImage('innovation1.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Fractional shares",
           body:
           "Instead of having to buy an entire share, invest any amount you want.",
-          image: _buildImage('otp.gif'),
+          image: _buildImage('iot-vector.png'),
           decoration: pageDecoration,
         ),
-
       ],
       onDone: () => _onIntroEnd(context),
       showSkipButton: true,
@@ -143,7 +142,7 @@ class _IntroPageState extends State<IntroPage> {
       curve: Curves.fastLinearToSlowEaseIn,
       controlsMargin:  EdgeInsets.all(16),
       controlsPadding:  EdgeInsets.fromLTRB(8.0, 4.0, 8.0, 4.0),
-      dotsDecorator:  DotsDecorator(
+      dotsDecorator:  const DotsDecorator(
         size: Size(10.0, 10.0),
         color: Color(0xFFBDBDBD),
         activeSize: Size(22.0, 10.0),
