@@ -37,13 +37,13 @@ class _ContactPageState extends State<ContactPage> {
                             r"{0,253}[a-zA-Z0-9])?)*$";
                         RegExp regex = RegExp(pattern);
                         if (value!.isEmpty || !regex.hasMatch(value)) {
-                          return 'Enter a valid email address';
+                          return S.current.msg_valid_mail;
                         }
                         return null;
                       },
                       decoration: InputDecoration(
-                        labelText: "${S.current.dark_them}",
-                        prefixIcon: Icon(
+                        labelText: S.current.email,
+                        prefixIcon: const Icon(
                           CupertinoIcons.at,
                           color: Colors.blue,
                         ),
@@ -67,13 +67,13 @@ class _ContactPageState extends State<ContactPage> {
                       keyboardType: TextInputType.text,
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return 'Enter a valid text';
+                          return S.current.msg_valid_text;
                         }
                         return null;
                       },
                       decoration: InputDecoration(
-                        labelText: "Object",
-                        prefixIcon: Icon(
+                        labelText: S.current.object,
+                        prefixIcon: const Icon(
                           CupertinoIcons.scribble,
                           color: Colors.blue,
                         ),
@@ -98,15 +98,15 @@ class _ContactPageState extends State<ContactPage> {
                       maxLines: 5,
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return "S.current.msg_champ_oblg";
+                          return S.current.msg_required_field;
                         }
                         return null;
                       },
                       decoration: InputDecoration(
-                        labelText: "Message",
+                        labelText: S.current.message,
                         alignLabelWithHint: true,
-                        hintText: "Your text here !",
-                        prefixIcon: Icon(
+                        hintText: S.current.msg_your_text,
+                        prefixIcon: const Icon(
                           CupertinoIcons.text_justify,
                           color: Colors.blue,
                         ),
@@ -127,25 +127,25 @@ class _ContactPageState extends State<ContactPage> {
                     ),
                   ],
                 )),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 16.0, horizontal: 30),
+              margin: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 30),
               child: ButtonTheme(
                 height: 50,
                 child: TextButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      Helpers.showToast("success");
+                      Helpers.showToast(S.current.success);
                     } else {
-                      Helpers.showToast("{S.current.msg_champs_obg}");
+                      Helpers.showToast(S.current.msg_required_field);
                     }
                   },
                   child: Center(
                       child: Text(
-                        "send".toUpperCase(),
-                        style: TextStyle(
+                        S.current.send.toUpperCase(),
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.bold),

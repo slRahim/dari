@@ -5,16 +5,16 @@ class PinkClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     // TODO: implement getClip
 
-    var path = new Path();
+    var path =  Path();
     path.lineTo(0, size.height / 3);
-    var firstControlPoint = new Offset(size.width / 6, size.height / 3);
-    var firstEndPoint = new Offset(size.width / 2.85, size.height / 4);
-    var secondControlPoint = new Offset(size.width / 2 + 40, size.height / 6);
+    var firstControlPoint =  Offset(size.width / 6, size.height / 3);
+    var firstEndPoint =  Offset(size.width / 2.85, size.height / 4);
+    var secondControlPoint =  Offset(size.width / 2 + 40, size.height / 6);
     var secondEndPoint =
-    new Offset(size.width - (size.width / 4), size.height / 3.5);
+     Offset(size.width - (size.width / 4), size.height / 3.5);
 
-    var thirdControlPoint = new Offset(size.width - 20, size.height / 6);
-    var thirdEndPoint = new Offset(size.width, size.height / 4);
+    var thirdControlPoint =  Offset(size.width - 20, size.height / 6);
+    var thirdEndPoint =  Offset(size.width, size.height / 4);
 
     path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
         firstEndPoint.dx, firstEndPoint.dy);

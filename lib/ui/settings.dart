@@ -103,9 +103,9 @@ class _SettingsPageState extends State<SettingsPage> {
       child: Scaffold(
         backgroundColor: Colors.white.withOpacity(.94),
         appBar: AppBar(
-          title: const Text(
-            "Settings",
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          title: Text(
+            S.current.settings,
+            style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
           backgroundColor: Colors.transparent,
@@ -119,12 +119,12 @@ class _SettingsPageState extends State<SettingsPage> {
               AwesomeDialog(
                   context: context,
                   title: "",
-                  desc: "{S.current.msg_retour_no_save}",
+                  desc: S.current.msg_back_no_save,
                   dialogType: DialogType.QUESTION,
                   animType: AnimType.BOTTOMSLIDE,
-                  btnCancelText: "non",
+                  btnCancelText: S.current.no,
                   btnCancelOnPress: () {},
-                  btnOkText: "oui",
+                  btnOkText: S.current.yes,
                   btnOkOnPress: () async {
                     Navigator.pop(context);
                   })
@@ -136,21 +136,21 @@ class _SettingsPageState extends State<SettingsPage> {
                 onPressed: () {
                   AwesomeDialog(
                       context: context,
-                      title: "{S.current.param_save}",
-                      desc: "{S.current.param_msg_save}",
+                      title: S.current.save,
+                      desc: S.current.msg_save,
                       dialogType: DialogType.QUESTION,
                       animType: AnimType.BOTTOMSLIDE,
-                      btnCancelText: "non",
+                      btnCancelText: S.current.no,
                       btnCancelOnPress: () {
                         Navigator.pop(context);
                       },
-                      btnOkText: "oui",
+                      btnOkText: S.current.yes,
                       btnOkOnPress: () async {
                         await _savedata();
                       })
                     .show();
                 },
-                icon: Icon(
+                icon: const Icon(
                   CupertinoIcons.checkmark,
                   color: Colors.blue,
                 ))
@@ -167,11 +167,11 @@ class _SettingsPageState extends State<SettingsPage> {
                         context: context,
                         dialogType: DialogType.QUESTION,
                         animType: AnimType.BOTTOMSLIDE,
-                        title: "{S.current.param_lang_title}",
+                        title: S.current.display_language,
                         body: _languageDialog(),
-                        btnCancelText: "non",
+                        btnCancelText: S.current.no,
                         btnCancelOnPress: () {},
-                        btnOkText: "oui",
+                        btnOkText: S.current.yes,
                         btnOkOnPress: () async {
                           setState(() {
                             _language;
@@ -181,7 +181,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   },
                   icons: CupertinoIcons.globe,
                   iconStyle: IconStyle(),
-                  title: 'Language',
+                  title: S.current.language,
                   subtitle: _language,
                 ),
                 SettingsItem(
@@ -199,8 +199,8 @@ class _SettingsPageState extends State<SettingsPage> {
                     withBackground: true,
                     backgroundColor: Colors.red,
                   ),
-                  title: 'Privacy',
-                  subtitle: "Edit your password",
+                  title: S.current.privacy,
+                  subtitle: S.current.edit_password,
                 ),
                 SettingsItem(
                   onTap: () {},
@@ -210,8 +210,8 @@ class _SettingsPageState extends State<SettingsPage> {
                     withBackground: true,
                     backgroundColor: Colors.green,
                   ),
-                  title: 'Lock screen',
-                  subtitle: _lockscreen ? "On" : "Off",
+                  title: S.current.lock_screen,
+                  subtitle: _lockscreen ? S.current.on : S.current.off,
                   trailing: CupertinoSwitch(
                     value: _lockscreen,
                     onChanged: (value) {
@@ -229,8 +229,8 @@ class _SettingsPageState extends State<SettingsPage> {
                     withBackground: true,
                     backgroundColor: Colors.blue.shade900,
                   ),
-                  title: 'Dark mode',
-                  subtitle: (_darkMode) ? "Dark" : "Light",
+                  title: S.current.dark_mode,
+                  subtitle: (_darkMode) ? S.current.dark_them : S.current.light_theme,
                   trailing: CupertinoSwitch(
                     value: _darkMode,
                     onChanged: (value) {
@@ -251,8 +251,8 @@ class _SettingsPageState extends State<SettingsPage> {
                     iconsColor: Colors.white,
                     backgroundColor: Colors.yellow.shade700,
                   ),
-                  title: 'Rate',
-                  subtitle: "Leave your feedback",
+                  title: S.current.rate,
+                  subtitle: S.current.msg_rate,
                 ),
                 SettingsItem(
                   onTap: () {},
@@ -260,8 +260,8 @@ class _SettingsPageState extends State<SettingsPage> {
                   iconStyle: IconStyle(
                     backgroundColor: Colors.purple,
                   ),
-                  title: 'About',
-                  subtitle: "Global Algerina Technology",
+                  title: S.current.aboutus,
+                  subtitle: S.current.company_name,
                 ),
               ],
             ),
@@ -275,12 +275,12 @@ class _SettingsPageState extends State<SettingsPage> {
     AwesomeDialog(
         context: context,
         title: "",
-        desc: "{S.current.msg_retour_no_save}",
+        desc: S.current.msg_back_no_save,
         dialogType: DialogType.QUESTION,
         animType: AnimType.BOTTOMSLIDE,
-        btnCancelText: "non",
+        btnCancelText: S.current.no,
         btnCancelOnPress: () {},
-        btnOkText: "oui",
+        btnOkText: S.current.yes,
         btnOkOnPress: () async {
           Navigator.pop(context);
         })

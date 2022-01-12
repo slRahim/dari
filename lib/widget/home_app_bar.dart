@@ -1,3 +1,4 @@
+import 'package:dari/generated/l10n.dart';
 import 'package:dari/helpers/statics.dart';
 import 'package:dari/widget/pinkclipper.dart';
 import 'package:flutter/cupertino.dart';
@@ -44,7 +45,7 @@ class HomeAppBar extends StatelessWidget {
                       : EdgeInsets.only(
                       top: MediaQuery.of(context).size.height / 15),
                   child: Text(
-                    "GLOBAL ALGERIAN \n TECHNOLOGY",
+                    S.current.company_name1,
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,

@@ -79,6 +79,916 @@ class S {
       args: [],
     );
   }
+
+  /// `Our Mission`
+  String get our_mission {
+    return Intl.message(
+      'Our Mission',
+      name: 'our_mission',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `GATECH specializes in all electrical systems, automation, instrumentation, supervision systems`
+  String get msg_intro1 {
+    return Intl.message(
+      'GATECH specializes in all electrical systems, automation, instrumentation, supervision systems',
+      name: 'msg_intro1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Innovation & Engineering`
+  String get innovation_engineering {
+    return Intl.message(
+      'Innovation & Engineering',
+      name: 'innovation_engineering',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get msg_intro2 {
+    return Intl.message(
+      '',
+      name: 'msg_intro2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Industrial IoT`
+  String get ind_iot {
+    return Intl.message(
+      'Industrial IoT',
+      name: 'ind_iot',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get msg_intro3 {
+    return Intl.message(
+      '',
+      name: 'msg_intro3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Done`
+  String get done {
+    return Intl.message(
+      'Done',
+      name: 'done',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Authentication`
+  String get authentication {
+    return Intl.message(
+      'Authentication',
+      name: 'authentication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your pin code to access the application`
+  String get msg_login {
+    return Intl.message(
+      'Enter your pin code to access the application',
+      name: 'msg_login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please, Fill all gaps`
+  String get msg_err_login {
+    return Intl.message(
+      'Please, Fill all gaps',
+      name: 'msg_err_login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `* Wrong password, Try again`
+  String get msg_err_password {
+    return Intl.message(
+      '* Wrong password, Try again',
+      name: 'msg_err_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login using biometrics ?`
+  String get msg_login_biometrics {
+    return Intl.message(
+      'Login using biometrics ?',
+      name: 'msg_login_biometrics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Scan`
+  String get scan {
+    return Intl.message(
+      'Scan',
+      name: 'scan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `sign in`
+  String get singin {
+    return Intl.message(
+      'sign in',
+      name: 'singin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please authenticate to access the application`
+  String get msg_auth_biometrics1 {
+    return Intl.message(
+      'Please authenticate to access the application',
+      name: 'msg_auth_biometrics1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Authentication required`
+  String get msg_auth_required {
+    return Intl.message(
+      'Authentication required',
+      name: 'msg_auth_required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Successfully authenticated`
+  String get msg_auth_success {
+    return Intl.message(
+      'Successfully authenticated',
+      name: 'msg_auth_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Authentication fail try again`
+  String get msg_auth_error {
+    return Intl.message(
+      'Authentication fail try again',
+      name: 'msg_auth_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Config biometric identity`
+  String get msg_config_biometrics {
+    return Intl.message(
+      'Config biometric identity',
+      name: 'msg_config_biometrics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lockout`
+  String get lockout {
+    return Intl.message(
+      'Lockout',
+      name: 'lockout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No available biometrics`
+  String get msg_no_biometrics {
+    return Intl.message(
+      'No available biometrics',
+      name: 'msg_no_biometrics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your device don't support biometrics`
+  String get msg_no_support_biometrics {
+    return Intl.message(
+      'Your device don\'t support biometrics',
+      name: 'msg_no_support_biometrics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want exit the app`
+  String get msg_exit {
+    return Intl.message(
+      'Do you want exit the app',
+      name: 'msg_exit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Press back again to quit the app`
+  String get msg_exit1 {
+    return Intl.message(
+      'Press back again to quit the app',
+      name: 'msg_exit1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exit`
+  String get exit {
+    return Intl.message(
+      'Exit',
+      name: 'exit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Electrical`
+  String get electrical {
+    return Intl.message(
+      'Electrical',
+      name: 'electrical',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Instrumentation`
+  String get instrumentation {
+    return Intl.message(
+      'Instrumentation',
+      name: 'instrumentation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Automation`
+  String get automation {
+    return Intl.message(
+      'Automation',
+      name: 'automation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Electronic maintenance`
+  String get electronic_maintenance {
+    return Intl.message(
+      'Electronic maintenance',
+      name: 'electronic_maintenance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `3D scanning`
+  String get d_scaning {
+    return Intl.message(
+      '3D scanning',
+      name: 'd_scaning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Generale`
+  String get generale {
+    return Intl.message(
+      'Generale',
+      name: 'generale',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Founded 2019`
+  String get founded {
+    return Intl.message(
+      'Founded 2019',
+      name: 'founded',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Company size 51-200 employees`
+  String get company_size {
+    return Intl.message(
+      'Company size 51-200 employees',
+      name: 'company_size',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activity zone baba ali Shaoula,Alger`
+  String get company_address {
+    return Intl.message(
+      'Activity zone baba ali Shaoula,Alger',
+      name: 'company_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Production unite`
+  String get company_field {
+    return Intl.message(
+      'Production unite',
+      name: 'company_field',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact`
+  String get contact {
+    return Intl.message(
+      'Contact',
+      name: 'contact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter a valid email address`
+  String get msg_valid_mail {
+    return Intl.message(
+      'Enter a valid email address',
+      name: 'msg_valid_mail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Object`
+  String get object {
+    return Intl.message(
+      'Object',
+      name: 'object',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter valid text`
+  String get msg_valid_text {
+    return Intl.message(
+      'Enter valid text',
+      name: 'msg_valid_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message`
+  String get message {
+    return Intl.message(
+      'Message',
+      name: 'message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your text hear !`
+  String get msg_your_text {
+    return Intl.message(
+      'Your text hear !',
+      name: 'msg_your_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fill all required fields`
+  String get msg_required_field {
+    return Intl.message(
+      'Fill all required fields',
+      name: 'msg_required_field',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `send`
+  String get send {
+    return Intl.message(
+      'send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success`
+  String get success {
+    return Intl.message(
+      'Success',
+      name: 'success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About us`
+  String get aboutus {
+    return Intl.message(
+      'About us',
+      name: 'aboutus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact us`
+  String get contactus {
+    return Intl.message(
+      'Contact us',
+      name: 'contactus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Map`
+  String get map {
+    return Intl.message(
+      'Map',
+      name: 'map',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details`
+  String get details {
+    return Intl.message(
+      'Details',
+      name: 'details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `E-Payment Portal`
+  String get epayment_portal {
+    return Intl.message(
+      'E-Payment Portal',
+      name: 'epayment_portal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You are about to pay your water bill with your CIB / EDAHABIA Secure card`
+  String get details_ade1 {
+    return Intl.message(
+      'You are about to pay your water bill with your CIB / EDAHABIA Secure card',
+      name: 'details_ade1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You are about to pay your electricity and gas bill with your CIB/EDAHABIA Secure card`
+  String get details_sonelgaz1 {
+    return Intl.message(
+      'You are about to pay your electricity and gas bill with your CIB/EDAHABIA Secure card',
+      name: 'details_sonelgaz1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Water Monitoring System`
+  String get water_monitoring {
+    return Intl.message(
+      'Water Monitoring System',
+      name: 'water_monitoring',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gas Monitoring System`
+  String get gas_monitoring {
+    return Intl.message(
+      'Gas Monitoring System',
+      name: 'gas_monitoring',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gas Well Monitoring System`
+  String get gas_well_monitoring {
+    return Intl.message(
+      'Gas Well Monitoring System',
+      name: 'gas_well_monitoring',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gas Well Monitoring System`
+  String get glucose_monitoring {
+    return Intl.message(
+      'Gas Well Monitoring System',
+      name: 'glucose_monitoring',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `fdqsfh dezefa f rtgb uiuhbjrtikb  gibz \n hgfgkhjhjg hfjgjv`
+  String get details_ade2 {
+    return Intl.message(
+      'fdqsfh dezefa f rtgb uiuhbjrtikb  gibz \\n hgfgkhjhjg hfjgjv',
+      name: 'details_ade2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sonelgaz card`
+  String get details_sonelgaz2 {
+    return Intl.message(
+      'Sonelgaz card',
+      name: 'details_sonelgaz2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get details_sonatrach1 {
+    return Intl.message(
+      '',
+      name: 'details_sonatrach1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sonatrach card`
+  String get details_sonatrach2 {
+    return Intl.message(
+      'Sonatrach card',
+      name: 'details_sonatrach2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get details_glucose1 {
+    return Intl.message(
+      '',
+      name: 'details_glucose1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Vitalcheck card`
+  String get details_glucose2 {
+    return Intl.message(
+      'Vitalcheck card',
+      name: 'details_glucose2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you wont to go back without saving last changes`
+  String get msg_back_no_save {
+    return Intl.message(
+      'Do you wont to go back without saving last changes',
+      name: 'msg_back_no_save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you wont to save last changes`
+  String get msg_save {
+    return Intl.message(
+      'Do you wont to save last changes',
+      name: 'msg_save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Display language`
+  String get display_language {
+    return Intl.message(
+      'Display language',
+      name: 'display_language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy`
+  String get privacy {
+    return Intl.message(
+      'Privacy',
+      name: 'privacy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit your pin code`
+  String get edit_password {
+    return Intl.message(
+      'Edit your pin code',
+      name: 'edit_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lock screen`
+  String get lock_screen {
+    return Intl.message(
+      'Lock screen',
+      name: 'lock_screen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `On`
+  String get on {
+    return Intl.message(
+      'On',
+      name: 'on',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Off`
+  String get off {
+    return Intl.message(
+      'Off',
+      name: 'off',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark mode`
+  String get dark_mode {
+    return Intl.message(
+      'Dark mode',
+      name: 'dark_mode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rate`
+  String get rate {
+    return Intl.message(
+      'Rate',
+      name: 'rate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Leave your feedback`
+  String get msg_rate {
+    return Intl.message(
+      'Leave your feedback',
+      name: 'msg_rate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Global Algerian Technology`
+  String get company_name {
+    return Intl.message(
+      'Global Algerian Technology',
+      name: 'company_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `GLOBAL ALGERIAN \n TECHNOLOGY`
+  String get company_name1 {
+    return Intl.message(
+      'GLOBAL ALGERIAN \\n TECHNOLOGY',
+      name: 'company_name1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sonatrach`
+  String get sonatrach {
+    return Intl.message(
+      'Sonatrach',
+      name: 'sonatrach',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sonelgaz`
+  String get sonelgaz {
+    return Intl.message(
+      'Sonelgaz',
+      name: 'sonelgaz',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ade`
+  String get ade {
+    return Intl.message(
+      'Ade',
+      name: 'ade',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `VitalCheck`
+  String get vitalcheck {
+    return Intl.message(
+      'VitalCheck',
+      name: 'vitalcheck',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pin code has successfully changed`
+  String get msg_pincode_save {
+    return Intl.message(
+      'Pin code has successfully changed',
+      name: 'msg_pincode_save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your pin code`
+  String get enter_pin_code {
+    return Intl.message(
+      'Enter your pin code',
+      name: 'enter_pin_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm your pin code`
+  String get confirm_pin_code {
+    return Intl.message(
+      'Confirm your pin code',
+      name: 'confirm_pin_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `to secure your app`
+  String get msg_secure_app {
+    return Intl.message(
+      'to secure your app',
+      name: 'msg_secure_app',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

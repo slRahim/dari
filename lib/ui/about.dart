@@ -1,3 +1,4 @@
+import 'package:dari/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class AboutPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("Our Mission" , style: TextStyle(
+                Text(S.current.our_mission, style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
                 ),),
@@ -26,7 +27,7 @@ class AboutPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("  Electrical " , textAlign: TextAlign.start, style: TextStyle(
+                Text("  ${S.current.electrical} " , textAlign: TextAlign.start, style: const TextStyle(
                   fontSize: 16,
                 ),),
               ],
@@ -34,7 +35,7 @@ class AboutPage extends StatelessWidget {
             SizedBox(height: 5,),
             Row(
               children: [
-                Text("  instrumentation" , style: TextStyle(
+                Text("  ${S.current.instrumentation}" , style: const TextStyle(
                   fontSize: 16,
                 ),),
               ],
@@ -42,7 +43,7 @@ class AboutPage extends StatelessWidget {
             SizedBox(height: 5,),
             Row(
               children: [
-                Text("  Automation" , style: TextStyle(
+                Text("  ${S.current.automation}" , style: const TextStyle(
                   fontSize: 16,
                 ),),
               ],
@@ -50,7 +51,7 @@ class AboutPage extends StatelessWidget {
             SizedBox(height: 5,),
             Row(
               children: [
-                Text("  Electronic maintenance " , style: TextStyle(
+                Text("  ${S.current.electronic_maintenance} " , style: const TextStyle(
                   fontSize: 16,
                 ),),
               ],
@@ -58,93 +59,93 @@ class AboutPage extends StatelessWidget {
             SizedBox(height: 5,),
             Row(
               children: [
-                Text("  3D scanning" , style: TextStyle(
+                Text("  ${S.current.d_scaning}" , style: const TextStyle(
                   fontSize: 16,
                 ),),
               ],
             ),
 
-            SizedBox(height: 20,),
+           const SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text("Generale" , style: TextStyle(
+                Text(S.current.generale , style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
                 ),),
               ],
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text("Founded 2019" , textAlign: TextAlign.start, style: TextStyle(
+                Text(S.current.founded , textAlign: TextAlign.start, style: const TextStyle(
                   fontSize: 16,
                 ),),
               ],
             ),
-            SizedBox(height: 5,),
+            const SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text("Company size 51-200 employees" , style: TextStyle(
+                Text(S.current.company_size , style: const TextStyle(
                   fontSize: 16,
                 ),),
               ],
             ),
-            SizedBox(height: 5,),
+            const SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text("Zone D'Activité baba ali Shaoula,Alger" , style: TextStyle(
+                Text(S.current.company_address , style: const TextStyle(
                   fontSize: 16,
                 ),),
               ],
             ),
-            SizedBox(height: 5,),
+            const SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text("Usine de production" , style: TextStyle(
+                Text(S.current.company_field , style: const TextStyle(
                   fontSize: 16,
                 ),),
               ],
             ),
 
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("Contact" , style: TextStyle(
+                Text(S.current.contact , style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
                 ),),
               ],
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
+              children: const [
                 Icon(CupertinoIcons.phone),
                 Text(" 000-000-000-000" , textAlign: TextAlign.start, style: TextStyle(
                   fontSize: 16,
                 ),),
               ],
             ),
-            SizedBox(height: 5,),
+            const SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
+              children: const [
                 Icon(Icons.article_outlined),
-                Text(" 000-000-000-000" , textAlign: TextAlign.start, style: TextStyle(
+                Text(" 023-589-900" , textAlign: TextAlign.start, style: TextStyle(
                   fontSize: 16,
                 ),),
               ],
             ),
-            SizedBox(height: 5,),
+            const SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
+              children: const [
                 Icon(CupertinoIcons.globe),
                 Text(" gatech.amenhyd.com" , textAlign: TextAlign.start, style: TextStyle(
                   fontSize: 16,

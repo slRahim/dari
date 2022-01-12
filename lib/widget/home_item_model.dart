@@ -1,3 +1,4 @@
+import 'package:dari/generated/l10n.dart';
 import 'package:dragablegridview_flutter/dragablegridviewbin.dart';
 
 const String homeItemSonatrachId = "homeItemSonatrachId";
@@ -15,19 +16,19 @@ class HomeItemModel extends DragAbleGridViewBin{
 
 HomeItemModel homeItemSonatrach = HomeItemModel(
     id: homeItemSonatrachId,
-    title: "Sonatrach",
+    title: S.current.sonatrach,
     image: "assets/sonatrach.png");
 HomeItemModel homeItemSonelgaz = HomeItemModel(
     id: homeItemSonelgazId,
-    title: "Sonelgaz",
+    title: S.current.sonelgaz,
     image: "assets/sonelgaz.png");
 HomeItemModel homeItemAde = HomeItemModel(
     id: homeItemAdeId,
-    title: "Ade",
+    title: S.current.ade,
     image: "assets/ade.png");
 HomeItemModel homeItemVitalCheck = HomeItemModel(
     id: homeItemVitalCheckId,
-    title: "VitalChekc",
+    title: S.current.vitalcheck,
     image: "assets/glucometer.png");
 
 

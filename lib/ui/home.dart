@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:dari/generated/l10n.dart';
 import 'package:dari/helpers/helpers.dart';
 import 'package:dari/helpers/statics.dart';
 import 'package:dari/ui/contact.dart';
@@ -121,13 +122,13 @@ class _HomeState extends State<Home> {
           },
           items: <BottomNavyBarItem>[
             BottomNavyBarItem(
-                title: Text('Home'), icon: Icon(CupertinoIcons.house_alt)),
+                title: Text(S.current.home), icon: Icon(CupertinoIcons.house_alt)),
             BottomNavyBarItem(
-                title: Text('Contact us'), icon: Icon(CupertinoIcons.mail)),
+                title: Text(S.current.aboutus), icon: Icon(CupertinoIcons.mail)),
             BottomNavyBarItem(
-                title: Text('Map'), icon: Icon(CupertinoIcons.map)),
+                title: Text(S.current.map), icon: Icon(CupertinoIcons.map)),
             BottomNavyBarItem(
-                title: Text('About us'), icon: Icon(CupertinoIcons.book)),
+                title: Text(S.current.contactus), icon: Icon(CupertinoIcons.book)),
           ],
         ),
       ),
@@ -140,18 +141,18 @@ class _HomeState extends State<Home> {
     if (currentBackPressTime == null ||
         now.difference(currentBackPressTime!) > Duration(seconds: 3)) {
       currentBackPressTime = now;
-      Helpers.showToast("S.current.msg_quitter1");
+      Helpers.showToast(S.current.msg_exit1);
       return Future.value(false);
     }
     AwesomeDialog(
       context: context,
       dialogType: DialogType.ERROR,
       animType: AnimType.BOTTOMSLIDE,
-      title: "quitter",
-      desc: "msg_quitter",
-      btnCancelText: "non",
+      title: S.current.exit,
+      desc: S.current.msg_exit,
+      btnCancelText: S.current.no,
       btnCancelOnPress: () {},
-      btnOkText: "oui",
+      btnOkText: S.current.yes,
       btnOkOnPress: () async {
         exit(0);
       },

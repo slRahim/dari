@@ -1,3 +1,4 @@
+import 'package:dari/generated/l10n.dart';
 import 'package:dari/helpers/helpers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -232,7 +233,7 @@ class _OtpSceernState extends State<OtpSceern> {
         String message;
         if (fisrt == strPin) {
           widget.onCodePinChanged(strPin);
-          message = "S.current.msg_save_pass";
+          message = S.current.msg_pincode_save;
         } else {
           message = "S.current.msg_pass_incorrecte";
         }
@@ -304,14 +305,13 @@ class _OtpSceernState extends State<OtpSceern> {
     return Column(
       children: <Widget>[
         Text(
-          fisrt == "" ? "Enter your pin code" : "Confirm your pin code",
+          fisrt == "" ? S.current.enter_pin_code : S.current.confirm_pin_code,
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.white),
         ),
         SizedBox(
           height: 10,
         ),
-        Text(
-          fisrt == "" ? "to secure your app" : "to secure your app",
+        Text(S.current.msg_secure_app,
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
         ),
       ],

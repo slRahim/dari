@@ -1,3 +1,4 @@
+import 'package:dari/generated/l10n.dart';
 import 'package:dari/widget/home_item_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -62,8 +63,8 @@ class _ListingPageState extends State<ListingPage> {
           list.add(
             SimpleFoldingCell.create(
               key: _foldingCellKey,
-              frontWidget: _buildFrontWidget(_foldingCellKey , "assets/epayment.png", "E-Payment Portal" , "https://fatourati.seaal.dz/"),
-              innerWidget: _buildInnerWidget(_foldingCellKey, "assets/epayment.png", "Details", "Vous vous apprêtez à régler votre facture d'eau grâce à votre carte Sécurisée \n CIB / EDAHABIA" , "https://fatourati.seaal.dz/"),
+              frontWidget: _buildFrontWidget(_foldingCellKey , "assets/epayment.png", S.current.epayment_portal , "https://fatourati.seaal.dz/"),
+              innerWidget: _buildInnerWidget(_foldingCellKey, "assets/epayment.png", S.current.details, S.current.details_ade1 , "https://fatourati.seaal.dz/"),
               cellSize: Size(MediaQuery.of(context).size.width, 140),
               padding: EdgeInsets.all(15),
               animationDuration: Duration(milliseconds: 300),
@@ -75,8 +76,8 @@ class _ListingPageState extends State<ListingPage> {
           list.add(
             SimpleFoldingCell.create(
               key: _foldingCellKey,
-              frontWidget: _buildFrontWidget(_foldingCellKey , "assets/epayment.png", "E-Payment Portal" , "https://baridinet.poste.dz/sonelgaz"),
-              innerWidget: _buildInnerWidget(_foldingCellKey, "assets/epayment.png", "Details", "Vous vous apprêtez à régler votre facture d'éléctricité et de gaz grâce à votre carte Sécurisée CIB / EDAHABIA" , "https://baridinet.poste.dz/sonelgaz"),
+              frontWidget: _buildFrontWidget(_foldingCellKey , "assets/epayment.png", S.current.epayment_portal , "https://baridinet.poste.dz/sonelgaz"),
+              innerWidget: _buildInnerWidget(_foldingCellKey, "assets/epayment.png", S.current.details, S.current.details_sonelgaz1 , "https://baridinet.poste.dz/sonelgaz"),
               cellSize: Size(MediaQuery.of(context).size.width, 140),
               padding: EdgeInsets.all(15),
               animationDuration: Duration(milliseconds: 300),
@@ -95,8 +96,8 @@ class _ListingPageState extends State<ListingPage> {
         list.add(
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
-            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , "Water Monitoring System" , "http://gatech.amenhyd.com:1881/ui"),
-            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , "Details" , "fdqsfh dezefa f rtgb uiuhbjrtikb  gibz \n hgfgkhjhjg hfjgjv" , "http://gatech.amenhyd.com:1881/ui"),
+            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , S.current.water_monitoring , "http://gatech.amenhyd.com:1881/ui"),
+            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , S.current.details , S.current.details_ade2 , "http://gatech.amenhyd.com:1881/ui"),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -108,8 +109,8 @@ class _ListingPageState extends State<ListingPage> {
         list.add(
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
-            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , "Gas Monitoring System","http://gatech.amenhyd.com:1880/ui"),
-            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , "Details" , "Sonelgaz card","http://gatech.amenhyd.com:1880/ui"),
+            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , S.current.gas_monitoring,"http://gatech.amenhyd.com:1880/ui"),
+            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , S.current.details , S.current.details_sonelgaz2,"http://gatech.amenhyd.com:1880/ui"),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -121,8 +122,8 @@ class _ListingPageState extends State<ListingPage> {
         list.add(
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
-            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , "Gas Well Monitoring System","http://gatech.amenhyd.com:1880/ui"),
-            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , "Details" , "Sonatrach card","http://gatech.amenhyd.com:1880/ui"),
+            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , S.current.gas_well_monitoring,"http://gatech.amenhyd.com:1880/ui"),
+            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , S.current.details , S.current.details_sonatrach2,"http://gatech.amenhyd.com:1880/ui"),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -134,8 +135,8 @@ class _ListingPageState extends State<ListingPage> {
         list.add(
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
-            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , "Glucose Monitoring System",""),
-            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , "Details" , "Vitalcheck card",""),
+            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , S.current.glucose_monitoring,""),
+            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , S.current.details , S.current.details_glucose2,""),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -257,8 +258,6 @@ class _ListingPageState extends State<ListingPage> {
       ),
     );
   }
-
-
 
   void urlLauncher(url)async{
     if (await canLaunch(url)) {

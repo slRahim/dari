@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:dari/widget/utils.dart' as utils;
+
 
 class IntroPage extends StatefulWidget {
   const IntroPage({Key? key}) : super(key: key);
@@ -17,13 +17,9 @@ class IntroPage extends StatefulWidget {
 
 class _IntroPageState extends State<IntroPage> {
   final introKey = GlobalKey<IntroductionScreenState>();
-
   SharedPreferences ?_prefs;
-
   String defaultLocale = Platform.localeName;
   String ?_selectedLanguage;
-  List<DropdownMenuItem<String>> ?_languages;
-
 
   @override
   void initState() {
@@ -32,7 +28,6 @@ class _IntroPageState extends State<IntroPage> {
   }
 
   Future futureInit() async {
-    _languages = utils.buildDropLanguageDownMenuItems(Statics.languages);
     switch (defaultLocale.substring(0, (2))) {
       case "en":
         _selectedLanguage = Statics.languages[0];
@@ -110,23 +105,20 @@ class _IntroPageState extends State<IntroPage> {
       globalBackgroundColor: Colors.white,
       pages: [
         PageViewModel(
-          title: "Fractional shares",
-          body:
-          "Instead of having to buy an entire share, invest any amount you want.",
+          title: S.current.our_mission,
+          body:S.current.msg_intro1,
           image: _buildImage('automation.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Fractional shares",
-          body:
-          "Instead of having to buy an entire share, invest any amount you want.",
+          title: S.current.innovation_engineering,
+          body:S.current.msg_intro2,
           image: _buildImage('innovation1.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Fractional shares",
-          body:
-          "Instead of having to buy an entire share, invest any amount you want.",
+          title: S.current.ind_iot,
+          body: S.current.msg_intro3,
           image: _buildImage('iot-vector.png'),
           decoration: pageDecoration,
         ),
@@ -136,9 +128,9 @@ class _IntroPageState extends State<IntroPage> {
       skipFlex: 0,
       nextFlex: 0,
       rtl:(Statics.languages.indexOf(_selectedLanguage!) == 2) , // Display as right-to-left
-      skip: const Text('Skip'),
+      skip:  Text(S.current.skip),
       next: const Icon(Icons.arrow_forward,size: 30,),
-      done: const Text('Done', style: TextStyle(fontWeight: FontWeight.w600)),
+      done:  Text(S.current.done, style: TextStyle(fontWeight: FontWeight.w600)),
       curve: Curves.fastLinearToSlowEaseIn,
       controlsMargin:  EdgeInsets.all(16),
       controlsPadding:  EdgeInsets.fromLTRB(8.0, 4.0, 8.0, 4.0),

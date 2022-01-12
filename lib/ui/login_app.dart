@@ -84,8 +84,7 @@ class _LoginAppState extends State<LoginApp> {
               SizedBox(height: 8),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
-                child: Text(
-                  'Authentication',
+                child: Text(S.current.authentication,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                   textAlign: TextAlign.center,
                 ),
@@ -95,12 +94,12 @@ class _LoginAppState extends State<LoginApp> {
                 const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8),
                 child: RichText(
                   text: TextSpan(
-                      text: "Enter the login code",
+                      text: S.current.msg_login,
                       style: TextStyle(color: Colors.black54, fontSize: 15)),
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Form(
@@ -121,7 +120,7 @@ class _LoginAppState extends State<LoginApp> {
                       animationType: AnimationType.fade,
                       validator: (v) {
                         if (v!.length < 4) {
-                          return "Fill all gaps";
+                          return S.current.msg_err_login;
                         }
                         return null;
                       },
@@ -142,7 +141,7 @@ class _LoginAppState extends State<LoginApp> {
                       errorAnimationController: errorController,
                       controller: textEditingController,
                       keyboardType: TextInputType.number,
-                      boxShadows: [
+                      boxShadows: const [
                         BoxShadow(
                           offset: Offset(0, 1),
                           color: Colors.black12,
@@ -166,35 +165,35 @@ class _LoginAppState extends State<LoginApp> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
-                  hasError ? "* Wrong password, Try again" : "",
+                  hasError ? S.current.msg_err_password : "",
                   style: TextStyle(
                       color: Colors.redAccent,
                       fontSize: 14,
                       fontWeight: FontWeight.w400),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Login using biomethrics ? ",
+                    S.current.msg_login_biometrics,
                     style: TextStyle(color: Colors.black54, fontSize: 15),
                   ),
                   TextButton(
                       onPressed:_authBiometric,
                       child: Text(
-                        "SCAN",
-                        style: TextStyle(
+                        S.current.scan,
+                        style: const TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ))
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Container(
@@ -221,8 +220,8 @@ class _LoginAppState extends State<LoginApp> {
                     },
                     child: Center(
                         child: Text(
-                          "sign in".toUpperCase(),
-                          style: TextStyle(
+                          S.current.singin.toUpperCase(),
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 18,
                               fontWeight: FontWeight.bold),
@@ -258,28 +257,28 @@ class _LoginAppState extends State<LoginApp> {
           .getAvailableBiometrics();
       if (availableBiometrics.isNotEmpty) {
         res = await localAuth.authenticate(
-            localizedReason: 'Please authenticate to access home',
+            localizedReason: S.current.msg_auth_biometrics1,
             androidAuthStrings: AndroidAuthMessages(
-                signInTitle: "Authentication required",
+                signInTitle: S.current.msg_auth_required,
                 biometricHint: '',
-                cancelButton: "Cancel",
-                biometricSuccess: "msg_auth_success",
-                biometricNotRecognized: "Authentication fail try again",
-                goToSettingsButton: "Config biometric identity"
+                cancelButton: S.current.cancel,
+                biometricSuccess: S.current.msg_auth_success,
+                biometricNotRecognized: S.current.msg_auth_error,
+                goToSettingsButton: S.current.msg_config_biometrics
             ),
             iOSAuthStrings: IOSAuthMessages(
-              lockOut: "Lockout",
-              cancelButton: "Cancel",
-              goToSettingsButton: "Config biometric identity",
+              lockOut: S.current.lockout,
+              cancelButton: S.current.cancel,
+              goToSettingsButton: S.current.msg_config_biometrics,
             ),
             useErrorDialogs: true,
             stickyAuth: true,
             biometricOnly: true);
       } else {
-        Helpers.showToast("no availabe biometrics");
+        Helpers.showToast(S.current.msg_no_biometrics);
       }
     } else {
-      Helpers.showToast("do not support biometrics");
+      Helpers.showToast(S.current.msg_no_support_biometrics);
     }
 
     if (res) {
@@ -291,25 +290,24 @@ class _LoginAppState extends State<LoginApp> {
     DateTime now = DateTime.now();
 
     if (currentBackPressTime == null ||
-        now.difference(currentBackPressTime!) > Duration(seconds: 3)) {
+        now.difference(currentBackPressTime!) > const Duration(seconds: 3)) {
       currentBackPressTime = now;
-      Helpers.showToast("S.current.msg_quitter1");
+      Helpers.showToast(S.current.msg_exit1);
       return Future.value(false);
     }
     AwesomeDialog(
       context: context,
       dialogType: DialogType.ERROR,
       animType: AnimType.BOTTOMSLIDE,
-      title: "quitter",
-      desc: "msg_quitter",
-      btnCancelText: "No",
+      title: S.current.exit,
+      desc: S.current.msg_exit,
+      btnCancelText: S.current.no,
       btnCancelOnPress: () {},
-      btnOkText: "Yes",
+      btnOkText: S.current.yes,
       btnOkOnPress: () async {
         exit(0);
       },
-    )
-      ..show();
+    ).show();
     return Future.value(false);
   }
 }
