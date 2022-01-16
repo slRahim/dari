@@ -36,7 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "company_name":
             MessageLookupByLibrary.simpleMessage("Global Algerian Technology"),
         "company_name1": MessageLookupByLibrary.simpleMessage(
-            "GLOBAL ALGERIAN \\n TECHNOLOGY"),
+            "GLOBAL ALGERIAN \n TECHNOLOGY"),
         "company_size": MessageLookupByLibrary.simpleMessage(
             "Company size 51-200 employees"),
         "confirm_pin_code":

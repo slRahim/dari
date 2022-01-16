@@ -7,8 +7,9 @@ import 'package:folding_cell/folding_cell/widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ListingPage extends StatefulWidget {
-  final argument ;
-  const ListingPage({Key? key ,  required this.argument}) : super(key: key);
+  final argument;
+
+  const ListingPage({Key? key, required this.argument}) : super(key: key);
 
   @override
   _ListingPageState createState() => _ListingPageState();
@@ -18,11 +19,11 @@ class _ListingPageState extends State<ListingPage> {
   final _foldingCellKey = GlobalKey<SimpleFoldingCellState>();
   final _foldingCellKey1 = GlobalKey<SimpleFoldingCellState>();
 
-  late HomeItemModel item ;
+  late HomeItemModel item;
 
   @override
   void initState() {
-    item = widget.argument ;
+    item = widget.argument;
     super.initState();
   }
 
@@ -35,8 +36,11 @@ class _ListingPageState extends State<ListingPage> {
         backgroundColor: Colors.blue.shade700,
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(CupertinoIcons.chevron_back , color: Colors.white,),
-          onPressed: (){
+          icon: Icon(
+            CupertinoIcons.chevron_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
             Navigator.pop(context);
           },
         ),
@@ -53,18 +57,27 @@ class _ListingPageState extends State<ListingPage> {
     );
   }
 
-  List<Widget> _cardItems(){
-    List<Widget> list = [] ;
+  List<Widget> _cardItems() {
+    List<Widget> list = [];
 
     //epayment card
-    if(item.id == homeItemAdeId || item.id == homeItemSonelgazId){
-      switch (item.id){
-        case homeItemAdeId :
+    if (item.id == homeItemAdeId || item.id == homeItemSonelgazId) {
+      switch (item.id) {
+        case homeItemAdeId:
           list.add(
             SimpleFoldingCell.create(
               key: _foldingCellKey,
-              frontWidget: _buildFrontWidget(_foldingCellKey , "assets/epayment.png", S.current.epayment_portal , "https://fatourati.seaal.dz/"),
-              innerWidget: _buildInnerWidget(_foldingCellKey, "assets/epayment.png", S.current.details, S.current.details_ade1 , "https://fatourati.seaal.dz/"),
+              frontWidget: _buildFrontWidget(
+                  _foldingCellKey,
+                  "assets/epayment.png",
+                  S.current.epayment_portal,
+                  "https://fatourati.seaal.dz/"),
+              innerWidget: _buildInnerWidget(
+                  _foldingCellKey,
+                  "assets/epayment.png",
+                  S.current.details,
+                  S.current.details_ade1,
+                  "https://fatourati.seaal.dz/"),
               cellSize: Size(MediaQuery.of(context).size.width, 140),
               padding: EdgeInsets.all(15),
               animationDuration: Duration(milliseconds: 300),
@@ -72,12 +85,21 @@ class _ListingPageState extends State<ListingPage> {
             ),
           );
           break;
-        case homeItemSonelgazId :
+        case homeItemSonelgazId:
           list.add(
             SimpleFoldingCell.create(
               key: _foldingCellKey,
-              frontWidget: _buildFrontWidget(_foldingCellKey , "assets/epayment.png", S.current.epayment_portal , "https://baridinet.poste.dz/sonelgaz"),
-              innerWidget: _buildInnerWidget(_foldingCellKey, "assets/epayment.png", S.current.details, S.current.details_sonelgaz1 , "https://baridinet.poste.dz/sonelgaz"),
+              frontWidget: _buildFrontWidget(
+                  _foldingCellKey,
+                  "assets/epayment.png",
+                  S.current.epayment_portal,
+                  "https://baridinet.poste.dz/sonelgaz"),
+              innerWidget: _buildInnerWidget(
+                  _foldingCellKey,
+                  "assets/epayment.png",
+                  S.current.details,
+                  S.current.details_sonelgaz1,
+                  "https://baridinet.poste.dz/sonelgaz"),
               cellSize: Size(MediaQuery.of(context).size.width, 140),
               padding: EdgeInsets.all(15),
               animationDuration: Duration(milliseconds: 300),
@@ -86,18 +108,25 @@ class _ListingPageState extends State<ListingPage> {
           );
           break;
       }
-
     }
-
 
     //entreprise card
-    switch (item.id){
-      case homeItemAdeId :
+    switch (item.id) {
+      case homeItemAdeId:
         list.add(
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
-            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , S.current.water_monitoring , "http://gatech.amenhyd.com:1881/ui"),
-            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , S.current.details , S.current.details_ade2 , "http://gatech.amenhyd.com:1881/ui"),
+            frontWidget: _buildFrontWidget(
+                _foldingCellKey1,
+                "assets/iot-banner.png",
+                S.current.water_monitoring,
+                "http://gatech.amenhyd.com:1881/ui"),
+            innerWidget: _buildInnerWidget(
+                _foldingCellKey1,
+                "assets/iot-banner.png",
+                S.current.details,
+                S.current.details_ade2,
+                "http://gatech.amenhyd.com:1881/ui"),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -105,12 +134,21 @@ class _ListingPageState extends State<ListingPage> {
           ),
         );
         break;
-      case homeItemSonelgazId :
+      case homeItemSonelgazId:
         list.add(
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
-            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , S.current.gas_monitoring,"http://gatech.amenhyd.com:1880/ui"),
-            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , S.current.details , S.current.details_sonelgaz2,"http://gatech.amenhyd.com:1880/ui"),
+            frontWidget: _buildFrontWidget(
+                _foldingCellKey1,
+                "assets/iot-banner.png",
+                S.current.gas_monitoring,
+                "http://gatech.amenhyd.com:1880/ui"),
+            innerWidget: _buildInnerWidget(
+                _foldingCellKey1,
+                "assets/iot-banner.png",
+                S.current.details,
+                S.current.details_sonelgaz2,
+                "http://gatech.amenhyd.com:1880/ui"),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -118,12 +156,21 @@ class _ListingPageState extends State<ListingPage> {
           ),
         );
         break;
-      case homeItemSonatrachId :
+      case homeItemSonatrachId:
         list.add(
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
-            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , S.current.gas_well_monitoring,"http://gatech.amenhyd.com:1880/ui"),
-            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , S.current.details , S.current.details_sonatrach2,"http://gatech.amenhyd.com:1880/ui"),
+            frontWidget: _buildFrontWidget(
+                _foldingCellKey1,
+                "assets/iot-banner.png",
+                S.current.gas_well_monitoring,
+                "http://gatech.amenhyd.com:1880/ui"),
+            innerWidget: _buildInnerWidget(
+                _foldingCellKey1,
+                "assets/iot-banner.png",
+                S.current.details,
+                S.current.details_sonatrach2,
+                "http://gatech.amenhyd.com:1880/ui"),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -131,12 +178,18 @@ class _ListingPageState extends State<ListingPage> {
           ),
         );
         break;
-      case homeItemVitalCheckId :
+      case homeItemVitalCheckId:
         list.add(
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
-            frontWidget: _buildFrontWidget(_foldingCellKey1 , "assets/iot-banner.png" , S.current.glucose_monitoring,""),
-            innerWidget: _buildInnerWidget(_foldingCellKey1,  "assets/iot-banner.png" , S.current.details , S.current.details_glucose2,""),
+            frontWidget: _buildFrontWidget(_foldingCellKey1,
+                "assets/iot-banner.png", S.current.glucose_monitoring, ""),
+            innerWidget: _buildInnerWidget(
+                _foldingCellKey1,
+                "assets/iot-banner.png",
+                S.current.details,
+                S.current.details_glucose2,
+                ""),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -146,20 +199,21 @@ class _ListingPageState extends State<ListingPage> {
         break;
     }
 
-    return list ;
+    return list;
   }
 
-  Widget _buildFrontWidget(_key ,String imagesrc , String title , String url) {
+  Widget _buildFrontWidget(_key, String imagesrc, String title, String url) {
     return InkWell(
-      onTap: (){
-          urlLauncher(url);
+      onTap: () {
+        urlLauncher(url);
       },
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(imagesrc),
             fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(Colors.black.withOpacity(1), BlendMode.dstATop),
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(1), BlendMode.dstATop),
           ),
         ),
         alignment: Alignment.center,
@@ -200,17 +254,19 @@ class _ListingPageState extends State<ListingPage> {
     );
   }
 
-  Widget _buildInnerWidget(_key , String imagesrc , String title , String content , String url) {
+  Widget _buildInnerWidget(
+      _key, String imagesrc, String title, String content, String url) {
     return InkWell(
-      onTap: (){
-         urlLauncher(url);
+      onTap: () {
+        urlLauncher(url);
       },
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(imagesrc),
             fit: BoxFit.cover,
-            colorFilter:  ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.dstATop),
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.3), BlendMode.dstATop),
           ),
         ),
         padding: const EdgeInsets.only(top: 30),
@@ -232,10 +288,7 @@ class _ListingPageState extends State<ListingPage> {
               child: Text(
                 content,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 18
-                ),
+                style: const TextStyle(color: Colors.black, fontSize: 18),
               ),
             ),
             Positioned(
@@ -259,7 +312,7 @@ class _ListingPageState extends State<ListingPage> {
     );
   }
 
-  void urlLauncher(url)async{
+  void urlLauncher(url) async {
     if (await canLaunch(url)) {
       await launch(
         url,

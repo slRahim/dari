@@ -2,6 +2,7 @@ import 'package:dari/generated/l10n.dart';
 import 'package:dari/helpers/helpers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactPage extends StatefulWidget {
   const ContactPage({Key? key}) : super(key: key);
@@ -12,6 +13,9 @@ class ContactPage extends StatefulWidget {
 
 class _ContactPageState extends State<ContactPage> {
   final _formKey = GlobalKey<FormState>();
+  TextEditingController _email =  TextEditingController();
+  TextEditingController _object =  TextEditingController();
+  TextEditingController _msg =  TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +32,7 @@ class _ContactPageState extends State<ContactPage> {
                   runSpacing: 13,
                   children: [
                     TextFormField(
-                      // controller: _refControl,
+                      controller: _email,
                       keyboardType: TextInputType.emailAddress,
                       validator: (value) {
                         String pattern =
@@ -63,7 +67,7 @@ class _ContactPageState extends State<ContactPage> {
                       ),
                     ),
                     TextFormField(
-                      // controller: _refControl,
+                      controller: _object,
                       keyboardType: TextInputType.text,
                       validator: (value) {
                         if (value!.isEmpty) {
@@ -93,7 +97,7 @@ class _ContactPageState extends State<ContactPage> {
                       ),
                     ),
                     TextFormField(
-                      // controller: _refControl,
+                      controller: _msg,
                       keyboardType: TextInputType.multiline,
                       maxLines: 5,
                       validator: (value) {
@@ -138,6 +142,7 @@ class _ContactPageState extends State<ContactPage> {
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       Helpers.showToast(S.current.success);
+                      sendemail() ;
                     } else {
                       Helpers.showToast(S.current.msg_required_field);
                     }
@@ -170,5 +175,28 @@ class _ContactPageState extends State<ContactPage> {
         ),
       ),
     );
+  }
+  void sendemail() async {
+    final Uri emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: 'slimani.abderrahim@gatechdz.com',
+      query: encodeQueryParameters(<String, String>{
+        'object' : _object.text ,
+        'subject': _msg.text
+      }),
+    );
+    if (await canLaunch(emailLaunchUri.toString())) {
+      await launch(
+        emailLaunchUri.toString(),
+      );
+    } else {
+      throw 'Could not launch $emailLaunchUri';
+    }
+  }
+
+  String? encodeQueryParameters(Map<String, String> params) {
+    return params.entries
+        .map((e) => '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+        .join('&');
   }
 }

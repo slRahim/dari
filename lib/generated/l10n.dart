@@ -903,7 +903,7 @@ class S {
   /// `GLOBAL ALGERIAN \n TECHNOLOGY`
   String get company_name1 {
     return Intl.message(
-      'GLOBAL ALGERIAN \\n TECHNOLOGY',
+      'GLOBAL ALGERIAN \n TECHNOLOGY',
       name: 'company_name1',
       desc: '',
       args: [],
