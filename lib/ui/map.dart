@@ -33,8 +33,8 @@ class _MapPageState extends State<MapPage> {
               point: latLng.LatLng(36.669452990903416, 3.051860970196347),
               builder: (ctx) => Container(
                 child: const Icon(
-                  CupertinoIcons.pin_fill,
-                  color: Colors.blue,
+                  CupertinoIcons.map_pin,
+                  color: Colors.red,
                   size: 50,
                 ),
               ),

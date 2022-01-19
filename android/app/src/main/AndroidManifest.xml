@@ -25,6 +25,7 @@
         </intent>
     </queries>
    <application
+        android:usesCleartextTraffic="true"
         android:label="dari"
         android:icon="@mipmap/ic_launcher">
         <activity

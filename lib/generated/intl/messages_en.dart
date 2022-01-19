@@ -50,17 +50,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "details_ade1": MessageLookupByLibrary.simpleMessage(
             "You are about to pay your water bill with your CIB / EDAHABIA Secure card"),
         "details_ade2": MessageLookupByLibrary.simpleMessage(
-            "fdqsfh dezefa f rtgb uiuhbjrtikb  gibz \\n hgfgkhjhjg hfjgjv"),
+            "Remote supervision and control of a water treatment or pumping station from a smartphone"),
         "details_glucose1": MessageLookupByLibrary.simpleMessage(""),
-        "details_glucose2":
-            MessageLookupByLibrary.simpleMessage("Vitalcheck card"),
+        "details_glucose2": MessageLookupByLibrary.simpleMessage(
+            "Mobile application for medical devices to measure glucose levels"),
         "details_sonatrach1": MessageLookupByLibrary.simpleMessage(""),
-        "details_sonatrach2":
-            MessageLookupByLibrary.simpleMessage("Sonatrach card"),
+        "details_sonatrach2": MessageLookupByLibrary.simpleMessage(
+            "A simulation of remote monitoring and control of a gas well from a smartphone"),
         "details_sonelgaz1": MessageLookupByLibrary.simpleMessage(
             "You are about to pay your electricity and gas bill with your CIB/EDAHABIA Secure card"),
-        "details_sonelgaz2":
-            MessageLookupByLibrary.simpleMessage("Sonelgaz card"),
+        "details_sonelgaz2": MessageLookupByLibrary.simpleMessage(
+            "Remote monitoring and control of gas connections and leaks from a smartphone"),
         "display_language":
             MessageLookupByLibrary.simpleMessage("Display language"),
         "done": MessageLookupByLibrary.simpleMessage("Done"),
@@ -81,8 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "gas_well_monitoring":
             MessageLookupByLibrary.simpleMessage("Gas Well Monitoring System"),
         "generale": MessageLookupByLibrary.simpleMessage("Generale"),
-        "glucose_monitoring":
-            MessageLookupByLibrary.simpleMessage("Gas Well Monitoring System"),
+        "glucose_monitoring": MessageLookupByLibrary.simpleMessage(
+            "Glucose Well Monitoring System"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "ind_iot": MessageLookupByLibrary.simpleMessage("Industrial IoT"),
         "innovation_engineering":
@@ -98,27 +98,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "msg_auth_biometrics1": MessageLookupByLibrary.simpleMessage(
             "Please authenticate to access the application"),
         "msg_auth_error": MessageLookupByLibrary.simpleMessage(
-            "Authentication fail try again"),
+            "Authentication failed try again"),
         "msg_auth_required":
             MessageLookupByLibrary.simpleMessage("Authentication required"),
         "msg_auth_success":
             MessageLookupByLibrary.simpleMessage("Successfully authenticated"),
         "msg_back_no_save": MessageLookupByLibrary.simpleMessage(
-            "Do you wont to go back without saving last changes"),
+            "Do you want to go back without saving last changes?"),
         "msg_config_biometrics":
             MessageLookupByLibrary.simpleMessage("Config biometric identity"),
         "msg_err_login":
             MessageLookupByLibrary.simpleMessage("Please, Fill all gaps"),
         "msg_err_password":
-            MessageLookupByLibrary.simpleMessage("* Wrong password, Try again"),
+            MessageLookupByLibrary.simpleMessage("* Wrong pin code, Try again"),
         "msg_exit":
             MessageLookupByLibrary.simpleMessage("Do you want exit the app"),
         "msg_exit1": MessageLookupByLibrary.simpleMessage(
             "Press back again to quit the app"),
         "msg_intro1": MessageLookupByLibrary.simpleMessage(
             "GATECH specializes in all electrical systems, automation, instrumentation, supervision systems"),
-        "msg_intro2": MessageLookupByLibrary.simpleMessage(""),
-        "msg_intro3": MessageLookupByLibrary.simpleMessage(""),
+        "msg_intro2": MessageLookupByLibrary.simpleMessage(
+            "the character inovation is the first principle of our company we aim to develop solutions 100% Algerian and create value add for our environment"),
+        "msg_intro3": MessageLookupByLibrary.simpleMessage(
+            "Local solutions for the exploitation and use of IoT in the industrial sector"),
         "msg_login": MessageLookupByLibrary.simpleMessage(
             "Enter your pin code to access the application"),
         "msg_login_biometrics":
@@ -133,7 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "msg_required_field":
             MessageLookupByLibrary.simpleMessage("Fill all required fields"),
         "msg_save": MessageLookupByLibrary.simpleMessage(
-            "Do you wont to save last changes"),
+            "Do you want to save last changes?"),
         "msg_secure_app":
             MessageLookupByLibrary.simpleMessage("to secure your app"),
         "msg_valid_mail":
@@ -141,7 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "msg_valid_text":
             MessageLookupByLibrary.simpleMessage("Enter valid text"),
         "msg_your_text":
-            MessageLookupByLibrary.simpleMessage("Your text hear !"),
+            MessageLookupByLibrary.simpleMessage("Your text here !"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "object": MessageLookupByLibrary.simpleMessage("Object"),
         "off": MessageLookupByLibrary.simpleMessage("Off"),

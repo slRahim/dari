@@ -110,10 +110,10 @@ class S {
     );
   }
 
-  /// ``
+  /// `the character inovation is the first principle of our company we aim to develop solutions 100% Algerian and create value add for our environment`
   String get msg_intro2 {
     return Intl.message(
-      '',
+      'the character inovation is the first principle of our company we aim to develop solutions 100% Algerian and create value add for our environment',
       name: 'msg_intro2',
       desc: '',
       args: [],
@@ -130,10 +130,10 @@ class S {
     );
   }
 
-  /// ``
+  /// `Local solutions for the exploitation and use of IoT in the industrial sector`
   String get msg_intro3 {
     return Intl.message(
-      '',
+      'Local solutions for the exploitation and use of IoT in the industrial sector',
       name: 'msg_intro3',
       desc: '',
       args: [],
@@ -190,10 +190,10 @@ class S {
     );
   }
 
-  /// `* Wrong password, Try again`
+  /// `* Wrong pin code, Try again`
   String get msg_err_password {
     return Intl.message(
-      '* Wrong password, Try again',
+      '* Wrong pin code, Try again',
       name: 'msg_err_password',
       desc: '',
       args: [],
@@ -270,10 +270,10 @@ class S {
     );
   }
 
-  /// `Authentication fail try again`
+  /// `Authentication failed try again`
   String get msg_auth_error {
     return Intl.message(
-      'Authentication fail try again',
+      'Authentication failed try again',
       name: 'msg_auth_error',
       desc: '',
       args: [],
@@ -530,10 +530,10 @@ class S {
     );
   }
 
-  /// `Your text hear !`
+  /// `Your text here !`
   String get msg_your_text {
     return Intl.message(
-      'Your text hear !',
+      'Your text here !',
       name: 'msg_your_text',
       desc: '',
       args: [],
@@ -680,30 +680,30 @@ class S {
     );
   }
 
-  /// `Gas Well Monitoring System`
+  /// `Glucose Well Monitoring System`
   String get glucose_monitoring {
     return Intl.message(
-      'Gas Well Monitoring System',
+      'Glucose Well Monitoring System',
       name: 'glucose_monitoring',
       desc: '',
       args: [],
     );
   }
 
-  /// `fdqsfh dezefa f rtgb uiuhbjrtikb  gibz \n hgfgkhjhjg hfjgjv`
+  /// `Remote supervision and control of a water treatment or pumping station from a smartphone`
   String get details_ade2 {
     return Intl.message(
-      'fdqsfh dezefa f rtgb uiuhbjrtikb  gibz \\n hgfgkhjhjg hfjgjv',
+      'Remote supervision and control of a water treatment or pumping station from a smartphone',
       name: 'details_ade2',
       desc: '',
       args: [],
     );
   }
 
-  /// `Sonelgaz card`
+  /// `Remote monitoring and control of gas connections and leaks from a smartphone`
   String get details_sonelgaz2 {
     return Intl.message(
-      'Sonelgaz card',
+      'Remote monitoring and control of gas connections and leaks from a smartphone',
       name: 'details_sonelgaz2',
       desc: '',
       args: [],
@@ -720,10 +720,10 @@ class S {
     );
   }
 
-  /// `Sonatrach card`
+  /// `A simulation of remote monitoring and control of a gas well from a smartphone`
   String get details_sonatrach2 {
     return Intl.message(
-      'Sonatrach card',
+      'A simulation of remote monitoring and control of a gas well from a smartphone',
       name: 'details_sonatrach2',
       desc: '',
       args: [],
@@ -740,10 +740,10 @@ class S {
     );
   }
 
-  /// `Vitalcheck card`
+  /// `Mobile application for medical devices to measure glucose levels`
   String get details_glucose2 {
     return Intl.message(
-      'Vitalcheck card',
+      'Mobile application for medical devices to measure glucose levels',
       name: 'details_glucose2',
       desc: '',
       args: [],
@@ -760,10 +760,10 @@ class S {
     );
   }
 
-  /// `Do you wont to go back without saving last changes`
+  /// `Do you want to go back without saving last changes?`
   String get msg_back_no_save {
     return Intl.message(
-      'Do you wont to go back without saving last changes',
+      'Do you want to go back without saving last changes?',
       name: 'msg_back_no_save',
       desc: '',
       args: [],
@@ -780,10 +780,10 @@ class S {
     );
   }
 
-  /// `Do you wont to save last changes`
+  /// `Do you want to save last changes?`
   String get msg_save {
     return Intl.message(
-      'Do you wont to save last changes',
+      'Do you want to save last changes?',
       name: 'msg_save',
       desc: '',
       args: [],

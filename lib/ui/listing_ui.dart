@@ -269,7 +269,7 @@ class _ListingPageState extends State<ListingPage> {
                 Colors.black.withOpacity(0.3), BlendMode.dstATop),
           ),
         ),
-        padding: const EdgeInsets.only(top: 30),
+        padding: const EdgeInsetsDirectional.only(top: 30 , start: 5 , end:5 ),
         child: Stack(
           children: [
             Align(

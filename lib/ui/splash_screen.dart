@@ -1,8 +1,11 @@
 import 'package:dari/generated/l10n.dart';
+import 'package:dari/main.dart';
 import 'package:dari/ui/home.dart';
 import 'package:dari/ui/intro_page.dart';
 import 'package:dari/ui/login_app.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
@@ -24,6 +27,49 @@ class _SpalshScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    FirebaseMessaging.instance
+        .getInitialMessage()
+        .then((RemoteMessage? message) {
+      if (message != null) {
+        print(message) ;
+        // Navigator.pushNamed(
+        //   context,
+        //   '/message',
+        //   arguments: MessageArguments(message, true),
+        // );
+      }
+    });
+
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      RemoteNotification? notification = message.notification;
+      AndroidNotification? android = message.notification?.android;
+      if (notification != null && android != null ) {
+        flutterLocalNotificationsPlugin.show(
+          notification.hashCode,
+          notification.title,
+          notification.body,
+
+          NotificationDetails(
+            android: AndroidNotificationDetails(
+              channel.id,
+              channel.name,
+              channelDescription : channel.description,
+              icon: 'launch_background',
+              importance: Importance.max,
+              priority: Priority.high,
+              playSound: channel.playSound,
+              enableLights: channel.enableLights,
+              channelShowBadge: channel.showBadge,
+            ),
+          ),
+        );
+      }
+    });
+
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      print('A new onMessageOpenedApp event was published!');
+    });
+
     futureInit().then((value) {
       setState(() {
         finishLoading = true;

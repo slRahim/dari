@@ -22,145 +22,149 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "aboutus": MessageLookupByLibrary.simpleMessage("About us"),
+        "aboutus": MessageLookupByLibrary.simpleMessage("Propos de nous"),
         "ade": MessageLookupByLibrary.simpleMessage("Ade"),
         "app_name": MessageLookupByLibrary.simpleMessage("Dari"),
         "authentication":
-            MessageLookupByLibrary.simpleMessage("Authentication"),
-        "automation": MessageLookupByLibrary.simpleMessage("Automation"),
-        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+            MessageLookupByLibrary.simpleMessage("Authentification"),
+        "automation": MessageLookupByLibrary.simpleMessage("Automatisation"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
         "company_address": MessageLookupByLibrary.simpleMessage(
-            "Activity zone baba ali Shaoula,Alger"),
+            "Zone d’activité baba ali Shaoula,Alger"),
         "company_field":
-            MessageLookupByLibrary.simpleMessage("Production unite"),
+            MessageLookupByLibrary.simpleMessage("Unité de production"),
         "company_name":
             MessageLookupByLibrary.simpleMessage("Global Algerian Technology"),
         "company_name1": MessageLookupByLibrary.simpleMessage(
-            "GLOBAL ALGERIAN \\n TECHNOLOGY"),
+            "GLOBAL ALGERIAN \n TECHNOLOGY"),
         "company_size": MessageLookupByLibrary.simpleMessage(
-            "Company size 51-200 employees"),
+            "Taille de l’entreprise 51-200 employés"),
         "confirm_pin_code":
-            MessageLookupByLibrary.simpleMessage("Confirm your pin code"),
+            MessageLookupByLibrary.simpleMessage("Confirmez votre code PIN"),
         "contact": MessageLookupByLibrary.simpleMessage("Contact"),
-        "contactus": MessageLookupByLibrary.simpleMessage("Contact us"),
-        "d_scaning": MessageLookupByLibrary.simpleMessage("3D scanning"),
-        "dark_mode": MessageLookupByLibrary.simpleMessage("Dark mode"),
+        "contactus": MessageLookupByLibrary.simpleMessage("Contactez-nous"),
+        "d_scaning": MessageLookupByLibrary.simpleMessage("Numérisation 3D"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("Mode sombre"),
         "dark_them": MessageLookupByLibrary.simpleMessage("Sombre"),
-        "details": MessageLookupByLibrary.simpleMessage("Details"),
+        "details": MessageLookupByLibrary.simpleMessage("Détails"),
         "details_ade1": MessageLookupByLibrary.simpleMessage(
-            "You are about to pay your water bill with your CIB / EDAHABIA Secure card"),
+            "Vous êtes sur le point de payer votre facture d’eau avec votre carte CIB / EDAHABIA"),
         "details_ade2": MessageLookupByLibrary.simpleMessage(
-            "fdqsfh dezefa f rtgb uiuhbjrtikb  gibz \\n hgfgkhjhjg hfjgjv"),
+            "la supervision et le controle à distant d\'une station de traitement ou de pompage d\'eau depuis un smartphone"),
         "details_glucose1": MessageLookupByLibrary.simpleMessage(""),
-        "details_glucose2":
-            MessageLookupByLibrary.simpleMessage("Vitalcheck card"),
+        "details_glucose2": MessageLookupByLibrary.simpleMessage(
+            "Une application mobile pour les dispositifs medicale, pour mesurer le taux du glucose "),
         "details_sonatrach1": MessageLookupByLibrary.simpleMessage(""),
-        "details_sonatrach2":
-            MessageLookupByLibrary.simpleMessage("Sonatrach card"),
+        "details_sonatrach2": MessageLookupByLibrary.simpleMessage(
+            "Une simulation de la supervision et le controle à distant d\'un puit de gaz depuis un smartphone"),
         "details_sonelgaz1": MessageLookupByLibrary.simpleMessage(
-            "You are about to pay your electricity and gas bill with your CIB/EDAHABIA Secure card"),
-        "details_sonelgaz2":
-            MessageLookupByLibrary.simpleMessage("Sonelgaz card"),
+            "Vous êtes sur le point de payer votre facture d’électricité et de gaz avec votre carte CIB/EDAHABIA"),
+        "details_sonelgaz2": MessageLookupByLibrary.simpleMessage(
+            "la supervision et le controle à distant des branchement de gaz et des fuites depuis un smartphone"),
         "display_language":
-            MessageLookupByLibrary.simpleMessage("Display language"),
-        "done": MessageLookupByLibrary.simpleMessage("Done"),
+            MessageLookupByLibrary.simpleMessage("Langue d\'affichage"),
+        "done": MessageLookupByLibrary.simpleMessage("Fini"),
         "edit_password":
-            MessageLookupByLibrary.simpleMessage("Edit your pin code"),
-        "electrical": MessageLookupByLibrary.simpleMessage("Electrical"),
+            MessageLookupByLibrary.simpleMessage("Modifiez votre code PIN"),
+        "electrical": MessageLookupByLibrary.simpleMessage("Electrique"),
         "electronic_maintenance":
-            MessageLookupByLibrary.simpleMessage("Electronic maintenance"),
+            MessageLookupByLibrary.simpleMessage("Maintenance électronique"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "enter_pin_code":
-            MessageLookupByLibrary.simpleMessage("Enter your pin code"),
+            MessageLookupByLibrary.simpleMessage("entrez votre code PIN"),
         "epayment_portal":
-            MessageLookupByLibrary.simpleMessage("E-Payment Portal"),
-        "exit": MessageLookupByLibrary.simpleMessage("Exit"),
-        "founded": MessageLookupByLibrary.simpleMessage("Founded 2019"),
-        "gas_monitoring":
-            MessageLookupByLibrary.simpleMessage("Gas Monitoring System"),
-        "gas_well_monitoring":
-            MessageLookupByLibrary.simpleMessage("Gas Well Monitoring System"),
-        "generale": MessageLookupByLibrary.simpleMessage("Generale"),
-        "glucose_monitoring":
-            MessageLookupByLibrary.simpleMessage("Gas Well Monitoring System"),
-        "home": MessageLookupByLibrary.simpleMessage("Home"),
-        "ind_iot": MessageLookupByLibrary.simpleMessage("Industrial IoT"),
+            MessageLookupByLibrary.simpleMessage("Portail de e-paiement "),
+        "exit": MessageLookupByLibrary.simpleMessage("Sortir"),
+        "founded": MessageLookupByLibrary.simpleMessage("Fondée en 2019"),
+        "gas_monitoring": MessageLookupByLibrary.simpleMessage(
+            "Système de surveillance de gaz"),
+        "gas_well_monitoring": MessageLookupByLibrary.simpleMessage(
+            "Système de surveillance des puits de gaz"),
+        "generale": MessageLookupByLibrary.simpleMessage("Général"),
+        "glucose_monitoring": MessageLookupByLibrary.simpleMessage(
+            "Système de surveillance de glucose"),
+        "home": MessageLookupByLibrary.simpleMessage("Accueil"),
+        "ind_iot": MessageLookupByLibrary.simpleMessage("IdO industriel"),
         "innovation_engineering":
-            MessageLookupByLibrary.simpleMessage("Innovation & Engineering"),
+            MessageLookupByLibrary.simpleMessage("Innovation et ingénierie"),
         "instrumentation":
             MessageLookupByLibrary.simpleMessage("Instrumentation"),
-        "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "language": MessageLookupByLibrary.simpleMessage("Langue"),
         "light_theme": MessageLookupByLibrary.simpleMessage("Clair"),
-        "lock_screen": MessageLookupByLibrary.simpleMessage("Lock screen"),
-        "lockout": MessageLookupByLibrary.simpleMessage("Lockout"),
-        "map": MessageLookupByLibrary.simpleMessage("Map"),
-        "message": MessageLookupByLibrary.simpleMessage("Message"),
+        "lock_screen":
+            MessageLookupByLibrary.simpleMessage("Ecran de verrouillage"),
+        "lockout": MessageLookupByLibrary.simpleMessage("Verrouillage"),
+        "map": MessageLookupByLibrary.simpleMessage("Carte"),
+        "message": MessageLookupByLibrary.simpleMessage("Méssage"),
         "msg_auth_biometrics1": MessageLookupByLibrary.simpleMessage(
-            "Please authenticate to access the application"),
+            "Veuillez vous authentifier pour accéder à l’application"),
         "msg_auth_error": MessageLookupByLibrary.simpleMessage(
-            "Authentication fail try again"),
+            "Échec de l’authentification, réessayer"),
         "msg_auth_required":
-            MessageLookupByLibrary.simpleMessage("Authentication required"),
+            MessageLookupByLibrary.simpleMessage("Authentification requise"),
         "msg_auth_success":
-            MessageLookupByLibrary.simpleMessage("Successfully authenticated"),
+            MessageLookupByLibrary.simpleMessage("Authentifié avec succès"),
         "msg_back_no_save": MessageLookupByLibrary.simpleMessage(
-            "Do you wont to go back without saving last changes"),
-        "msg_config_biometrics":
-            MessageLookupByLibrary.simpleMessage("Config biometric identity"),
-        "msg_err_login":
-            MessageLookupByLibrary.simpleMessage("Please, Fill all gaps"),
-        "msg_err_password":
-            MessageLookupByLibrary.simpleMessage("* Wrong password, Try again"),
-        "msg_exit":
-            MessageLookupByLibrary.simpleMessage("Do you want exit the app"),
+            "Voulez-vous revenir en arrière sans enregistrer les dernières modifications?"),
+        "msg_config_biometrics": MessageLookupByLibrary.simpleMessage(
+            "Configuration de l’identité biométrique"),
+        "msg_err_login": MessageLookupByLibrary.simpleMessage(
+            "S’il vous plaît, remplissez toutes les cases"),
+        "msg_err_password": MessageLookupByLibrary.simpleMessage(
+            "* Code PIN erroné, réessayer"),
+        "msg_exit": MessageLookupByLibrary.simpleMessage(
+            "Voulez-vous quitter l’application?"),
         "msg_exit1": MessageLookupByLibrary.simpleMessage(
-            "Press back again to quit the app"),
+            "Appuyez à nouveau pour quitter l’application"),
         "msg_intro1": MessageLookupByLibrary.simpleMessage(
-            "GATECH specializes in all electrical systems, automation, instrumentation, supervision systems"),
-        "msg_intro2": MessageLookupByLibrary.simpleMessage(""),
-        "msg_intro3": MessageLookupByLibrary.simpleMessage(""),
+            "GATECH se spécialise dans tous les systèmes électriques, l’automatisation, l’instrumentation, les systèmes de supervision"),
+        "msg_intro2": MessageLookupByLibrary.simpleMessage(
+            "Le caractère inovation est le premier principe de notre entreprise nous visons à développer des solutions 100% algérien et créer de la valeur ajoutée pour notre environnement"),
+        "msg_intro3": MessageLookupByLibrary.simpleMessage(
+            "Des solutions locale pour l\'éxploitation et l\'utilisation de IdO dans le secteur industriel"),
         "msg_login": MessageLookupByLibrary.simpleMessage(
-            "Enter your pin code to access the application"),
-        "msg_login_biometrics":
-            MessageLookupByLibrary.simpleMessage("Login using biometrics ?"),
-        "msg_no_biometrics":
-            MessageLookupByLibrary.simpleMessage("No available biometrics"),
+            "Entrez votre code PIN pour accéder à l’application"),
+        "msg_login_biometrics": MessageLookupByLibrary.simpleMessage(
+            "Se connecter à l’aide de la biométrie ?"),
+        "msg_no_biometrics": MessageLookupByLibrary.simpleMessage(
+            "Aucune donnée biométrique disponible"),
         "msg_no_support_biometrics": MessageLookupByLibrary.simpleMessage(
-            "Your device don\'t support biometrics"),
+            "Votre appareil ne prend pas en charge la biométrie"),
         "msg_pincode_save": MessageLookupByLibrary.simpleMessage(
-            "Pin code has successfully changed"),
-        "msg_rate": MessageLookupByLibrary.simpleMessage("Leave your feedback"),
-        "msg_required_field":
-            MessageLookupByLibrary.simpleMessage("Fill all required fields"),
+            "Le code PIN a été modifié avec succès"),
+        "msg_rate":
+            MessageLookupByLibrary.simpleMessage("Laissez vos commentaires"),
+        "msg_required_field": MessageLookupByLibrary.simpleMessage(
+            "Remplir tous les champs requis"),
         "msg_save": MessageLookupByLibrary.simpleMessage(
-            "Do you wont to save last changes"),
-        "msg_secure_app":
-            MessageLookupByLibrary.simpleMessage("to secure your app"),
-        "msg_valid_mail":
-            MessageLookupByLibrary.simpleMessage("Enter a valid email address"),
+            "Voulez-vous enregistrer les dernières modifications?"),
+        "msg_secure_app": MessageLookupByLibrary.simpleMessage(
+            "pour sécuriser votre application"),
+        "msg_valid_mail": MessageLookupByLibrary.simpleMessage(
+            "Entrez une adresse courriel valide"),
         "msg_valid_text":
-            MessageLookupByLibrary.simpleMessage("Enter valid text"),
+            MessageLookupByLibrary.simpleMessage("Entrer un texte valide"),
         "msg_your_text":
-            MessageLookupByLibrary.simpleMessage("Your text hear !"),
-        "no": MessageLookupByLibrary.simpleMessage("No"),
-        "object": MessageLookupByLibrary.simpleMessage("Object"),
+            MessageLookupByLibrary.simpleMessage("Votre texte ici !"),
+        "no": MessageLookupByLibrary.simpleMessage("Non"),
+        "object": MessageLookupByLibrary.simpleMessage("Objet"),
         "off": MessageLookupByLibrary.simpleMessage("Off"),
         "on": MessageLookupByLibrary.simpleMessage("On"),
-        "our_mission": MessageLookupByLibrary.simpleMessage("Our Mission"),
-        "privacy": MessageLookupByLibrary.simpleMessage("Privacy"),
-        "rate": MessageLookupByLibrary.simpleMessage("Rate"),
-        "save": MessageLookupByLibrary.simpleMessage("Save"),
-        "scan": MessageLookupByLibrary.simpleMessage("Scan"),
-        "send": MessageLookupByLibrary.simpleMessage("send"),
-        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
-        "singin": MessageLookupByLibrary.simpleMessage("sign in"),
-        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "our_mission": MessageLookupByLibrary.simpleMessage("Notre mission"),
+        "privacy": MessageLookupByLibrary.simpleMessage("Confidentialité"),
+        "rate": MessageLookupByLibrary.simpleMessage("Noter"),
+        "save": MessageLookupByLibrary.simpleMessage("Sauvegarder"),
+        "scan": MessageLookupByLibrary.simpleMessage("Scanner"),
+        "send": MessageLookupByLibrary.simpleMessage("Envoyer"),
+        "settings": MessageLookupByLibrary.simpleMessage("Réglages"),
+        "singin": MessageLookupByLibrary.simpleMessage("Connectez"),
+        "skip": MessageLookupByLibrary.simpleMessage("Passer"),
         "sonatrach": MessageLookupByLibrary.simpleMessage("Sonatrach"),
         "sonelgaz": MessageLookupByLibrary.simpleMessage("Sonelgaz"),
-        "success": MessageLookupByLibrary.simpleMessage("Success"),
+        "success": MessageLookupByLibrary.simpleMessage("Succès"),
         "vitalcheck": MessageLookupByLibrary.simpleMessage("VitalCheck"),
-        "water_monitoring":
-            MessageLookupByLibrary.simpleMessage("Water Monitoring System"),
-        "yes": MessageLookupByLibrary.simpleMessage("Yes")
+        "water_monitoring": MessageLookupByLibrary.simpleMessage(
+            "Système de surveillance des eaux"),
+        "yes": MessageLookupByLibrary.simpleMessage("Oui")
       };
 }

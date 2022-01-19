@@ -1,3 +1,4 @@
+import 'package:dari/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:map_launcher/map_launcher.dart';
@@ -28,7 +29,7 @@ class Helpers {
 
   static openMapsSheet(context, final Coords coords) async {
     try {
-      final title = "Ocean Beach";
+      final title = S.current.company_name;
       final availableMaps = await MapLauncher.installedMaps;
 
       showModalBottomSheet(

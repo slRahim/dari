@@ -7,6 +7,7 @@ import 'package:dari/widget/otpscreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:restart_app/restart_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -221,25 +222,25 @@ class _SettingsPageState extends State<SettingsPage> {
                     },
                   ),
                 ),
-                SettingsItem(
-                  onTap: () {},
-                  icons: Icons.dark_mode_rounded,
-                  iconStyle: IconStyle(
-                    iconsColor: Colors.white,
-                    withBackground: true,
-                    backgroundColor: Colors.blue.shade900,
-                  ),
-                  title: S.current.dark_mode,
-                  subtitle: (_darkMode) ? S.current.dark_them : S.current.light_theme,
-                  trailing: CupertinoSwitch(
-                    value: _darkMode,
-                    onChanged: (value) {
-                      setState(() {
-                        _darkMode = value;
-                      });
-                    },
-                  ),
-                ),
+                // SettingsItem(
+                //   onTap: () {},
+                //   icons: Icons.dark_mode_rounded,
+                //   iconStyle: IconStyle(
+                //     iconsColor: Colors.white,
+                //     withBackground: true,
+                //     backgroundColor: Colors.blue.shade900,
+                //   ),
+                //   title: S.current.dark_mode,
+                //   subtitle: (_darkMode) ? S.current.dark_them : S.current.light_theme,
+                //   trailing: CupertinoSwitch(
+                //     value: _darkMode,
+                //     onChanged: (value) {
+                //       setState(() {
+                //         _darkMode = value;
+                //       });
+                //     },
+                //   ),
+                // ),
               ],
             ),
             SettingsGroup(
@@ -377,5 +378,6 @@ class _SettingsPageState extends State<SettingsPage> {
         break;
     }
     Navigator.pop(context);
+    Restart.restartApp();
   }
 }

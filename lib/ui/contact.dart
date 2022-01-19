@@ -31,41 +31,41 @@ class _ContactPageState extends State<ContactPage> {
                   spacing: 13,
                   runSpacing: 13,
                   children: [
-                    TextFormField(
-                      controller: _email,
-                      keyboardType: TextInputType.emailAddress,
-                      validator: (value) {
-                        String pattern =
-                            r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
-                            r"{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]"
-                            r"{0,253}[a-zA-Z0-9])?)*$";
-                        RegExp regex = RegExp(pattern);
-                        if (value!.isEmpty || !regex.hasMatch(value)) {
-                          return S.current.msg_valid_mail;
-                        }
-                        return null;
-                      },
-                      decoration: InputDecoration(
-                        labelText: S.current.email,
-                        prefixIcon: const Icon(
-                          CupertinoIcons.at,
-                          color: Colors.blue,
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.blue),
-                            borderRadius: BorderRadius.circular(5)),
-                        enabledBorder: OutlineInputBorder(
-                          gapPadding: 3.3,
-                          borderRadius: BorderRadius.circular(5),
-                          borderSide: BorderSide(color: Colors.blue),
-                        ),
-                        errorBorder: OutlineInputBorder(
-                          gapPadding: 3.3,
-                          borderRadius: BorderRadius.circular(5),
-                          borderSide: BorderSide(color: Colors.red),
-                        ),
-                      ),
-                    ),
+                    // TextFormField(
+                    //   controller: _email,
+                    //   keyboardType: TextInputType.emailAddress,
+                    //   validator: (value) {
+                    //     String pattern =
+                    //         r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
+                    //         r"{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]"
+                    //         r"{0,253}[a-zA-Z0-9])?)*$";
+                    //     RegExp regex = RegExp(pattern);
+                    //     if (value!.isEmpty || !regex.hasMatch(value)) {
+                    //       return S.current.msg_valid_mail;
+                    //     }
+                    //     return null;
+                    //   },
+                    //   decoration: InputDecoration(
+                    //     labelText: S.current.email,
+                    //     prefixIcon: const Icon(
+                    //       CupertinoIcons.at,
+                    //       color: Colors.blue,
+                    //     ),
+                    //     focusedBorder: OutlineInputBorder(
+                    //         borderSide: BorderSide(color: Colors.blue),
+                    //         borderRadius: BorderRadius.circular(5)),
+                    //     enabledBorder: OutlineInputBorder(
+                    //       gapPadding: 3.3,
+                    //       borderRadius: BorderRadius.circular(5),
+                    //       borderSide: BorderSide(color: Colors.blue),
+                    //     ),
+                    //     errorBorder: OutlineInputBorder(
+                    //       gapPadding: 3.3,
+                    //       borderRadius: BorderRadius.circular(5),
+                    //       borderSide: BorderSide(color: Colors.red),
+                    //     ),
+                    //   ),
+                    // ),
                     TextFormField(
                       controller: _object,
                       keyboardType: TextInputType.text,

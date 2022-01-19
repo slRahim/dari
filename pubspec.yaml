@@ -36,10 +36,15 @@ dependencies:
   cupertino_icons: ^1.0.4
   intl: ^0.17.0
 
+  restart_app: ^1.1.0
+
   firebase_core: ^1.11.0
   firebase_analytics: ^9.0.5
   firebase_crashlytics: ^2.4.5
   firebase_messaging: ^11.2.5
+
+  flutter_local_notifications: ^9.2.0
+  http: ^0.13.4
 
   dragablegridview_flutter: ^0.2.5
   fluttertoast: ^8.0.8
