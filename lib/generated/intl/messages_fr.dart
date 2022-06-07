@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutus": MessageLookupByLibrary.simpleMessage("Propos de nous"),
         "ade": MessageLookupByLibrary.simpleMessage("Ade"),
-        "app_name": MessageLookupByLibrary.simpleMessage("Dari"),
+        "app_name": MessageLookupByLibrary.simpleMessage("Dhakay"),
         "authentication":
             MessageLookupByLibrary.simpleMessage("Authentification"),
         "automation": MessageLookupByLibrary.simpleMessage("Automatisation"),
@@ -35,8 +35,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Unité de production"),
         "company_name":
             MessageLookupByLibrary.simpleMessage("Global Algerian Technology"),
-        "company_name1": MessageLookupByLibrary.simpleMessage(
-            "GLOBAL ALGERIAN \n TECHNOLOGY"),
+        "company_name1":
+            MessageLookupByLibrary.simpleMessage("MAKE YOUR LIFE \n SMART "),
         "company_size": MessageLookupByLibrary.simpleMessage(
             "Taille de l’entreprise 51-200 employés"),
         "confirm_pin_code":
@@ -51,12 +51,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Vous êtes sur le point de payer votre facture d’eau avec votre carte CIB / EDAHABIA"),
         "details_ade2": MessageLookupByLibrary.simpleMessage(
             "la supervision et le controle à distant d\'une station de traitement ou de pompage d\'eau depuis un smartphone"),
-        "details_glucose1": MessageLookupByLibrary.simpleMessage(""),
-        "details_glucose2": MessageLookupByLibrary.simpleMessage(
-            "Une application mobile pour les dispositifs medicale, pour mesurer le taux du glucose "),
-        "details_sonatrach1": MessageLookupByLibrary.simpleMessage(""),
-        "details_sonatrach2": MessageLookupByLibrary.simpleMessage(
-            "Une simulation de la supervision et le controle à distant d\'un puit de gaz depuis un smartphone"),
+        "details_energie1": MessageLookupByLibrary.simpleMessage(""),
+        "details_energie2": MessageLookupByLibrary.simpleMessage(
+            "Système de surveillance et de télégestion pour l\'energie solaire et les heoliaines"),
+        "details_smartcity1": MessageLookupByLibrary.simpleMessage(""),
+        "details_smartcity2": MessageLookupByLibrary.simpleMessage(
+            "Une simulation de la supervision et le controle à distant d\'une ville connecté à distance"),
         "details_sonelgaz1": MessageLookupByLibrary.simpleMessage(
             "Vous êtes sur le point de payer votre facture d’électricité et de gaz avec votre carte CIB/EDAHABIA"),
         "details_sonelgaz2": MessageLookupByLibrary.simpleMessage(
@@ -70,6 +70,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "electronic_maintenance":
             MessageLookupByLibrary.simpleMessage("Maintenance électronique"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "energie_monitoring": MessageLookupByLibrary.simpleMessage(
+            "Système de surveillance des energies verte"),
+        "energieverte": MessageLookupByLibrary.simpleMessage("Energie Verte"),
         "enter_pin_code":
             MessageLookupByLibrary.simpleMessage("entrez votre code PIN"),
         "epayment_portal":
@@ -78,11 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "founded": MessageLookupByLibrary.simpleMessage("Fondée en 2019"),
         "gas_monitoring": MessageLookupByLibrary.simpleMessage(
             "Système de surveillance de gaz"),
-        "gas_well_monitoring": MessageLookupByLibrary.simpleMessage(
-            "Système de surveillance des puits de gaz"),
         "generale": MessageLookupByLibrary.simpleMessage("Général"),
-        "glucose_monitoring": MessageLookupByLibrary.simpleMessage(
-            "Système de surveillance de glucose"),
         "home": MessageLookupByLibrary.simpleMessage("Accueil"),
         "ind_iot": MessageLookupByLibrary.simpleMessage("IdO industriel"),
         "innovation_engineering":
@@ -159,10 +158,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "settings": MessageLookupByLibrary.simpleMessage("Réglages"),
         "singin": MessageLookupByLibrary.simpleMessage("Connectez"),
         "skip": MessageLookupByLibrary.simpleMessage("Passer"),
-        "sonatrach": MessageLookupByLibrary.simpleMessage("Sonatrach"),
+        "smartcity": MessageLookupByLibrary.simpleMessage("Smart City"),
+        "smartcity_monitoring": MessageLookupByLibrary.simpleMessage(
+            "Système de surveillance de la ville intelligente"),
         "sonelgaz": MessageLookupByLibrary.simpleMessage("Sonelgaz"),
         "success": MessageLookupByLibrary.simpleMessage("Succès"),
-        "vitalcheck": MessageLookupByLibrary.simpleMessage("VitalCheck"),
         "water_monitoring": MessageLookupByLibrary.simpleMessage(
             "Système de surveillance des eaux"),
         "yes": MessageLookupByLibrary.simpleMessage("Oui")

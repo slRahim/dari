@@ -1,5 +1,5 @@
-import 'package:dari/helpers/statics.dart';
-import 'package:dari/widget/home_item_model.dart';
+import 'package:dhakay/helpers/statics.dart';
+import 'package:dhakay/widget/home_item_model.dart';
 import 'package:flutter/material.dart';
 
 class HomeItemWidget extends StatefulWidget {

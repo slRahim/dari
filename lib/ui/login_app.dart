@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:awesome_dialog/awesome_dialog.dart';
-import 'package:dari/generated/l10n.dart';
-import 'package:dari/helpers/helpers.dart';
-import 'package:dari/helpers/statics.dart';
+import 'package:dhakay/generated/l10n.dart';
+import 'package:dhakay/helpers/helpers.dart';
+import 'package:dhakay/helpers/statics.dart';
 import 'package:flutter/material.dart';
 import 'package:local_auth/auth_strings.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';

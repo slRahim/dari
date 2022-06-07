@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:dari/helpers/statics.dart';
+import 'package:dhakay/helpers/statics.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp(
     options: const FirebaseOptions(
       apiKey: 'AIzaSyBVyFt15zcdrhtDHU-p7fsdN5_DY6kLfA0',
-      appId: '1:930107122540:android:4094debf835e353ed54949',
+      appId: '1:930107122540:android:256c9f5b87b782bcd54949',
       messagingSenderId: '930107122540',
       projectId: 'gatechportal',
     ),
@@ -34,7 +34,7 @@ void main() async {
     await Firebase.initializeApp(
       options: const FirebaseOptions(
         apiKey: 'AIzaSyBVyFt15zcdrhtDHU-p7fsdN5_DY6kLfA0',
-        appId: '1:930107122540:android:4094debf835e353ed54949',
+        appId: '1:930107122540:android:256c9f5b87b782bcd54949',
         messagingSenderId: '930107122540',
         projectId: 'gatechportal',
       ),
@@ -89,7 +89,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      title: 'Dari',
+      title: 'Dhakay',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

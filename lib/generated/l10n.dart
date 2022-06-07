@@ -50,10 +50,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Dari`
+  /// `Dhakay`
   String get app_name {
     return Intl.message(
-      'Dari',
+      'Dhakay',
       name: 'app_name',
       desc: '',
       args: [],
@@ -670,21 +670,21 @@ class S {
     );
   }
 
-  /// `Gas Well Monitoring System`
-  String get gas_well_monitoring {
+  /// `Smart City Monitoring System`
+  String get smartcity_monitoring {
     return Intl.message(
-      'Gas Well Monitoring System',
-      name: 'gas_well_monitoring',
+      'Smart City Monitoring System',
+      name: 'smartcity_monitoring',
       desc: '',
       args: [],
     );
   }
 
-  /// `Glucose Well Monitoring System`
-  String get glucose_monitoring {
+  /// `Green Energy Monitoring System`
+  String get energie_monitoring {
     return Intl.message(
-      'Glucose Well Monitoring System',
-      name: 'glucose_monitoring',
+      'Green Energy Monitoring System',
+      name: 'energie_monitoring',
       desc: '',
       args: [],
     );
@@ -711,40 +711,40 @@ class S {
   }
 
   /// ``
-  String get details_sonatrach1 {
+  String get details_smartcity1 {
     return Intl.message(
       '',
-      name: 'details_sonatrach1',
+      name: 'details_smartcity1',
       desc: '',
       args: [],
     );
   }
 
-  /// `A simulation of remote monitoring and control of a gas well from a smartphone`
-  String get details_sonatrach2 {
+  /// `A simulation of remote monitoring and control of a smart city remotly`
+  String get details_smartcity2 {
     return Intl.message(
-      'A simulation of remote monitoring and control of a gas well from a smartphone',
-      name: 'details_sonatrach2',
+      'A simulation of remote monitoring and control of a smart city remotly',
+      name: 'details_smartcity2',
       desc: '',
       args: [],
     );
   }
 
   /// ``
-  String get details_glucose1 {
+  String get details_energie1 {
     return Intl.message(
       '',
-      name: 'details_glucose1',
+      name: 'details_energie1',
       desc: '',
       args: [],
     );
   }
 
-  /// `Mobile application for medical devices to measure glucose levels`
-  String get details_glucose2 {
+  /// `Monitoring and remote management system for solar and wind energy`
+  String get details_energie2 {
     return Intl.message(
-      'Mobile application for medical devices to measure glucose levels',
-      name: 'details_glucose2',
+      'Monitoring and remote management system for solar and wind energy',
+      name: 'details_energie2',
       desc: '',
       args: [],
     );
@@ -900,21 +900,21 @@ class S {
     );
   }
 
-  /// `GLOBAL ALGERIAN \n TECHNOLOGY`
+  /// `MAKE YOUR LIFE \n SMART `
   String get company_name1 {
     return Intl.message(
-      'GLOBAL ALGERIAN \n TECHNOLOGY',
+      'MAKE YOUR LIFE \n SMART ',
       name: 'company_name1',
       desc: '',
       args: [],
     );
   }
 
-  /// `Sonatrach`
-  String get sonatrach {
+  /// `Smart City`
+  String get smartcity {
     return Intl.message(
-      'Sonatrach',
-      name: 'sonatrach',
+      'Smart City',
+      name: 'smartcity',
       desc: '',
       args: [],
     );
@@ -940,11 +940,11 @@ class S {
     );
   }
 
-  /// `VitalCheck`
-  String get vitalcheck {
+  /// `Green Energy`
+  String get energieverte {
     return Intl.message(
-      'VitalCheck',
-      name: 'vitalcheck',
+      'Green Energy',
+      name: 'energieverte',
       desc: '',
       args: [],
     );

@@ -1,5 +1,5 @@
-import 'package:dari/generated/l10n.dart';
-import 'package:dari/helpers/helpers.dart';
+import 'package:dhakay/generated/l10n.dart';
+import 'package:dhakay/helpers/helpers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';

@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:dari/generated/l10n.dart';
-import 'package:dari/helpers/statics.dart';
+import 'package:dhakay/generated/l10n.dart';
+import 'package:dhakay/helpers/statics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';

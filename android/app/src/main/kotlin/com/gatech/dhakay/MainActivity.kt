@@ -1,4 +1,4 @@
-package com.gatech.dari ;
+package com.gatech.dhakay ;
 
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.android.FlutterFragmentActivity

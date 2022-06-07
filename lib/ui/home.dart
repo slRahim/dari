@@ -2,15 +2,15 @@ import 'dart:io';
 
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:dari/generated/l10n.dart';
-import 'package:dari/helpers/helpers.dart';
-import 'package:dari/helpers/statics.dart';
-import 'package:dari/ui/contact.dart';
-import 'package:dari/widget/blue700clipper.dart';
-import 'package:dari/widget/home_app_bar.dart';
-import 'package:dari/widget/home_item_model.dart';
-import 'package:dari/widget/home_item_widget.dart';
-import 'package:dari/widget/pinkclipper.dart';
+import 'package:dhakay/generated/l10n.dart';
+import 'package:dhakay/helpers/helpers.dart';
+import 'package:dhakay/helpers/statics.dart';
+import 'package:dhakay/ui/contact.dart';
+import 'package:dhakay/widget/blue700clipper.dart';
+import 'package:dhakay/widget/home_app_bar.dart';
+import 'package:dhakay/widget/home_item_model.dart';
+import 'package:dhakay/widget/home_item_widget.dart';
+import 'package:dhakay/widget/pinkclipper.dart';
 import 'package:dragablegridview_flutter/dragablegridview_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -33,10 +33,10 @@ class _HomeState extends State<Home> {
   DateTime? currentBackPressTime;
 
   List<HomeItemModel> homeItemsModels = [
-    homeItemSonatrach,
+    homeItemSmartcity,
     homeItemSonelgaz,
     homeItemAde,
-    homeItemVitalCheck
+    homeItemEnergie
   ];
 
   var editSwitchController = EditSwitchController();

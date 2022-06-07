@@ -1,4 +1,4 @@
-import 'package:dari/generated/l10n.dart';
+import 'package:dhakay/generated/l10n.dart';
 
 class Statics {
   static const RoutesKeys routes = const RoutesKeys();

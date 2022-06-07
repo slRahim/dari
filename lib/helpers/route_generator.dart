@@ -1,12 +1,12 @@
-import 'package:dari/helpers/statics.dart';
-import 'package:dari/ui/contact.dart';
-import 'package:dari/ui/home.dart';
-import 'package:dari/ui/intro_page.dart';
-import 'package:dari/ui/listing_ui.dart';
-import 'package:dari/ui/login_app.dart';
-import 'package:dari/ui/map.dart';
-import 'package:dari/ui/settings.dart';
-import 'package:dari/ui/splash_screen.dart';
+import 'package:dhakay/helpers/statics.dart';
+import 'package:dhakay/ui/contact.dart';
+import 'package:dhakay/ui/home.dart';
+import 'package:dhakay/ui/intro_page.dart';
+import 'package:dhakay/ui/listing_ui.dart';
+import 'package:dhakay/ui/login_app.dart';
+import 'package:dhakay/ui/map.dart';
+import 'package:dhakay/ui/settings.dart';
+import 'package:dhakay/ui/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {

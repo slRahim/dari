@@ -33,8 +33,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "company_field": MessageLookupByLibrary.simpleMessage("وحدة الإنتاج"),
         "company_name":
             MessageLookupByLibrary.simpleMessage("Global Algerian Technology"),
-        "company_name1": MessageLookupByLibrary.simpleMessage(
-            "GLOBAL ALGERIAN \n TECHNOLOGY"),
+        "company_name1":
+            MessageLookupByLibrary.simpleMessage("MAKE YOUR LIFE \n SMART "),
         "company_size":
             MessageLookupByLibrary.simpleMessage("حجم الشركة 51-200 موظف"),
         "confirm_pin_code":
@@ -49,12 +49,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "أنت على وشك أن تدفع فاتورة مائك ببطاقة CIB/ EDAHABIA المؤمنة"),
         "details_ade2": MessageLookupByLibrary.simpleMessage(
             "الإشراف والتحكم عن بعد في محطة معالجة أو ضخ المياه من هاتف ذكي"),
-        "details_glucose1": MessageLookupByLibrary.simpleMessage(""),
-        "details_glucose2": MessageLookupByLibrary.simpleMessage(
-            "تطبيق متنقل للأجهزة الطبية لقياس مستويات الجلوكوز"),
-        "details_sonatrach1": MessageLookupByLibrary.simpleMessage(""),
-        "details_sonatrach2": MessageLookupByLibrary.simpleMessage(
-            "محاكاة للرصد والتحكم عن بعد في بئر غاز من هاتف ذكي"),
+        "details_energie1": MessageLookupByLibrary.simpleMessage(""),
+        "details_energie2": MessageLookupByLibrary.simpleMessage(
+            "نظام رصد الطاقة الشمسية وطاقة الرياح وإدارتها عن بعد"),
+        "details_smartcity1": MessageLookupByLibrary.simpleMessage(""),
+        "details_smartcity2": MessageLookupByLibrary.simpleMessage(
+            "محاكاة للمراقبة عن بعد والتحكم في مدينة ذكية عن بعد"),
         "details_sonelgaz1": MessageLookupByLibrary.simpleMessage(
             "أنت على وشك دفع فاتورة الكهرباء والغاز ببطاقتك المؤمنة"),
         "details_sonelgaz2": MessageLookupByLibrary.simpleMessage(
@@ -67,6 +67,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "electronic_maintenance":
             MessageLookupByLibrary.simpleMessage("الصيانة الإلكترونية"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "energie_monitoring":
+            MessageLookupByLibrary.simpleMessage("نظام رصد الطاقة المتجددة"),
+        "energieverte": MessageLookupByLibrary.simpleMessage("طاقة متجددة"),
         "enter_pin_code":
             MessageLookupByLibrary.simpleMessage("أدخل الرمزالخاص بك"),
         "epayment_portal":
@@ -75,11 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "founded": MessageLookupByLibrary.simpleMessage("تأسست 2019"),
         "gas_monitoring":
             MessageLookupByLibrary.simpleMessage("نظام رصد الغاز"),
-        "gas_well_monitoring":
-            MessageLookupByLibrary.simpleMessage("نظام رصد آبار الغاز"),
         "generale": MessageLookupByLibrary.simpleMessage("العام"),
-        "glucose_monitoring":
-            MessageLookupByLibrary.simpleMessage("نظام رصد الجلوكوز"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسة"),
         "ind_iot": MessageLookupByLibrary.simpleMessage("IOT صناعي"),
         "innovation_engineering":
@@ -150,10 +149,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "settings": MessageLookupByLibrary.simpleMessage("إعدادات"),
         "singin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
-        "sonatrach": MessageLookupByLibrary.simpleMessage("سوناطراك"),
+        "smartcity": MessageLookupByLibrary.simpleMessage("مدينتي"),
+        "smartcity_monitoring":
+            MessageLookupByLibrary.simpleMessage("نظام مراقبة المدينة الذكية"),
         "sonelgaz": MessageLookupByLibrary.simpleMessage("سونلغاز"),
         "success": MessageLookupByLibrary.simpleMessage("نجاح"),
-        "vitalcheck": MessageLookupByLibrary.simpleMessage("فيتالشاك"),
         "water_monitoring":
             MessageLookupByLibrary.simpleMessage("نظام رصد المياه"),
         "yes": MessageLookupByLibrary.simpleMessage("نعم")

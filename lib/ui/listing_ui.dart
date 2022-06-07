@@ -1,5 +1,5 @@
-import 'package:dari/generated/l10n.dart';
-import 'package:dari/widget/home_item_model.dart';
+import 'package:dhakay/generated/l10n.dart';
+import 'package:dhakay/widget/home_item_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_offline/flutter_offline.dart';
@@ -36,7 +36,7 @@ class _ListingPageState extends State<ListingPage> {
         backgroundColor: Colors.blue.shade700,
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(
+          icon:const Icon(
             CupertinoIcons.chevron_back,
             color: Colors.white,
           ),
@@ -156,21 +156,21 @@ class _ListingPageState extends State<ListingPage> {
           ),
         );
         break;
-      case homeItemSonatrachId:
+      case homeItemSmartCityId:
         list.add(
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
             frontWidget: _buildFrontWidget(
                 _foldingCellKey1,
                 "assets/iot-banner.png",
-                S.current.gas_well_monitoring,
-                "http://gatech.amenhyd.com:1880/ui"),
+                S.current.smartcity_monitoring,
+                "http://gatech.amenhyd.com:1885/ui"),
             innerWidget: _buildInnerWidget(
                 _foldingCellKey1,
                 "assets/iot-banner.png",
                 S.current.details,
-                S.current.details_sonatrach2,
-                "http://gatech.amenhyd.com:1880/ui"),
+                S.current.details_smartcity2,
+                "http://gatech.amenhyd.com:1885/ui"),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -178,18 +178,18 @@ class _ListingPageState extends State<ListingPage> {
           ),
         );
         break;
-      case homeItemVitalCheckId:
+      case homeItemEnergieId:
         list.add(
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
             frontWidget: _buildFrontWidget(_foldingCellKey1,
-                "assets/iot-banner.png", S.current.glucose_monitoring, ""),
+                "assets/iot-banner.png", S.current.energie_monitoring, "http://gatech.amenhyd.com:1883/ui"),
             innerWidget: _buildInnerWidget(
                 _foldingCellKey1,
                 "assets/iot-banner.png",
                 S.current.details,
-                S.current.details_glucose2,
-                ""),
+                S.current.details_energie2,
+                "http://gatech.amenhyd.com:1883/ui"),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -227,7 +227,7 @@ class _ListingPageState extends State<ListingPage> {
                   title,
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 25.0,
+                    fontSize: 22.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

@@ -1,8 +1,8 @@
-import 'package:dari/generated/l10n.dart';
-import 'package:dari/main.dart';
-import 'package:dari/ui/home.dart';
-import 'package:dari/ui/intro_page.dart';
-import 'package:dari/ui/login_app.dart';
+import 'package:dhakay/generated/l10n.dart';
+import 'package:dhakay/main.dart';
+import 'package:dhakay/ui/home.dart';
+import 'package:dhakay/ui/intro_page.dart';
+import 'package:dhakay/ui/login_app.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -124,16 +124,7 @@ class _SpalshScreenState extends State<SplashScreen> {
                   : Home()
           : null,
       imageSize: 150,
-      imageSrc: "assets/gatech_logo.png",
-      text: "Gatech",
-      textType: TextType.ColorizeAnimationText,
-      textStyle: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold),
-      colors: [
-        Colors.blue.shade900,
-        Colors.blue.shade700,
-        Colors.blue.shade500,
-        Colors.blue.shade400,
-      ],
+      imageSrc: "assets/logo_dhakay_1920.png",
       backgroundColor: Colors.white,
     );
   }

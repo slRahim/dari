@@ -1,4 +1,4 @@
-import 'package:dari/generated/l10n.dart';
+import 'package:dhakay/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:map_launcher/map_launcher.dart';

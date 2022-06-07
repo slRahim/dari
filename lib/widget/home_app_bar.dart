@@ -1,6 +1,6 @@
-import 'package:dari/generated/l10n.dart';
-import 'package:dari/helpers/statics.dart';
-import 'package:dari/widget/pinkclipper.dart';
+import 'package:dhakay/generated/l10n.dart';
+import 'package:dhakay/helpers/statics.dart';
+import 'package:dhakay/widget/pinkclipper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +46,7 @@ class HomeAppBar extends StatelessWidget {
                       top: MediaQuery.of(context).size.height / 15),
                   child: Text(
                     S.current.company_name1,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
@@ -56,7 +56,7 @@ class HomeAppBar extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, RoutesKeys.settingsPage);
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       CupertinoIcons.settings,
                       color: Colors.white,
                       size: 30,

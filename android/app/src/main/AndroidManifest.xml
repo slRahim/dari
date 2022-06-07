@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gatech.dari">
+    package="com.gatech.dhakay">
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <queries>
@@ -26,7 +26,7 @@
     </queries>
    <application
         android:usesCleartextTraffic="true"
-        android:label="dari"
+        android:label="dhakay"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

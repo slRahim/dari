@@ -1,9 +1,9 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
-import 'package:dari/generated/l10n.dart';
-import 'package:dari/helpers/helpers.dart';
-import 'package:dari/helpers/statics.dart';
-import 'package:dari/widget/otpscreen.dart';
+import 'package:dhakay/generated/l10n.dart';
+import 'package:dhakay/helpers/helpers.dart';
+import 'package:dhakay/helpers/statics.dart';
+import 'package:dhakay/widget/otpscreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';

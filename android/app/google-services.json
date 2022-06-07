@@ -7,12 +7,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:930107122540:android:4094debf835e353ed54949",
+        "mobilesdk_app_id": "1:930107122540:android:256c9f5b87b782bcd54949",
         "android_client_info": {
-          "package_name": "com.gatech.dari"
+          "package_name": "com.gatech.dhakay"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "930107122540-u3t4q7isu383e06n1nd2vhnem8ueds6h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gatech.dhakay",
+            "certificate_hash": "33ee7f0df588e34b0a630015d9bc0efb816b5317"
+          }
+        },
         {
           "client_id": "930107122540-dne4epmii7k6sno4843fr5b5v0gvnde1.apps.googleusercontent.com",
           "client_type": 3
