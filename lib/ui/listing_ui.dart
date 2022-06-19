@@ -1,4 +1,5 @@
 import 'package:dhakay/generated/l10n.dart';
+import 'package:dhakay/ui/web_view.dart';
 import 'package:dhakay/widget/home_item_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -71,13 +72,13 @@ class _ListingPageState extends State<ListingPage> {
                   _foldingCellKey,
                   "assets/epayment.png",
                   S.current.epayment_portal,
-                  "https://fatourati.seaal.dz/"),
+                  "https://fatourati.seaal.dz/", true),
               innerWidget: _buildInnerWidget(
                   _foldingCellKey,
                   "assets/epayment.png",
                   S.current.details,
                   S.current.details_ade1,
-                  "https://fatourati.seaal.dz/"),
+                  "https://fatourati.seaal.dz/", true),
               cellSize: Size(MediaQuery.of(context).size.width, 140),
               padding: EdgeInsets.all(15),
               animationDuration: Duration(milliseconds: 300),
@@ -93,13 +94,13 @@ class _ListingPageState extends State<ListingPage> {
                   _foldingCellKey,
                   "assets/epayment.png",
                   S.current.epayment_portal,
-                  "https://baridinet.poste.dz/sonelgaz"),
+                  "https://baridinet.poste.dz/sonelgaz", true),
               innerWidget: _buildInnerWidget(
                   _foldingCellKey,
                   "assets/epayment.png",
                   S.current.details,
                   S.current.details_sonelgaz1,
-                  "https://baridinet.poste.dz/sonelgaz"),
+                  "https://baridinet.poste.dz/sonelgaz", true),
               cellSize: Size(MediaQuery.of(context).size.width, 140),
               padding: EdgeInsets.all(15),
               animationDuration: Duration(milliseconds: 300),
@@ -120,13 +121,13 @@ class _ListingPageState extends State<ListingPage> {
                 _foldingCellKey1,
                 "assets/iot-banner.png",
                 S.current.water_monitoring,
-                "http://gatech.amenhyd.com:1881/ui"),
+                "http://gatech.amenhyd.com:1881/ui",false),
             innerWidget: _buildInnerWidget(
                 _foldingCellKey1,
                 "assets/iot-banner.png",
                 S.current.details,
                 S.current.details_ade2,
-                "http://gatech.amenhyd.com:1881/ui"),
+                "http://gatech.amenhyd.com:1881/ui",false),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -142,13 +143,13 @@ class _ListingPageState extends State<ListingPage> {
                 _foldingCellKey1,
                 "assets/iot-banner.png",
                 S.current.gas_monitoring,
-                "http://gatech.amenhyd.com:1880/ui"),
+                "http://gatech.amenhyd.com:1880/ui",false),
             innerWidget: _buildInnerWidget(
                 _foldingCellKey1,
                 "assets/iot-banner.png",
                 S.current.details,
                 S.current.details_sonelgaz2,
-                "http://gatech.amenhyd.com:1880/ui"),
+                "http://gatech.amenhyd.com:1880/ui",false),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -164,13 +165,13 @@ class _ListingPageState extends State<ListingPage> {
                 _foldingCellKey1,
                 "assets/iot-banner.png",
                 S.current.smartcity_monitoring,
-                "http://gatech.amenhyd.com:1885/ui"),
+                "http://gatech.amenhyd.com:1885/ui" , true),
             innerWidget: _buildInnerWidget(
                 _foldingCellKey1,
                 "assets/iot-banner.png",
                 S.current.details,
                 S.current.details_smartcity2,
-                "http://gatech.amenhyd.com:1885/ui"),
+                "http://gatech.amenhyd.com:1885/ui" , true),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -183,13 +184,13 @@ class _ListingPageState extends State<ListingPage> {
           SimpleFoldingCell.create(
             key: _foldingCellKey1,
             frontWidget: _buildFrontWidget(_foldingCellKey1,
-                "assets/iot-banner.png", S.current.energie_monitoring, "http://gatech.amenhyd.com:1883/ui"),
+                "assets/iot-banner.png", S.current.energie_monitoring, "http://gatech.amenhyd.com:1883/ui" , false),
             innerWidget: _buildInnerWidget(
                 _foldingCellKey1,
                 "assets/iot-banner.png",
                 S.current.details,
                 S.current.details_energie2,
-                "http://gatech.amenhyd.com:1883/ui"),
+                "http://gatech.amenhyd.com:1883/ui" , false),
             cellSize: Size(MediaQuery.of(context).size.width, 140),
             padding: EdgeInsets.all(15),
             animationDuration: Duration(milliseconds: 300),
@@ -202,10 +203,18 @@ class _ListingPageState extends State<ListingPage> {
     return list;
   }
 
-  Widget _buildFrontWidget(_key, String imagesrc, String title, String url) {
+  Widget _buildFrontWidget(_key, String imagesrc, String title, String url , bool webview) {
     return InkWell(
       onTap: () {
-        urlLauncher(url);
+        if(webview){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) =>  Webview(url: url)),
+          );
+        }else{
+          urlLauncher(url);
+        }
+
       },
       child: Container(
         decoration: BoxDecoration(
@@ -255,10 +264,17 @@ class _ListingPageState extends State<ListingPage> {
   }
 
   Widget _buildInnerWidget(
-      _key, String imagesrc, String title, String content, String url) {
+      _key, String imagesrc, String title, String content, String url , bool webview) {
     return InkWell(
       onTap: () {
-        urlLauncher(url);
+        if(webview){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) =>  Webview(url: url)),
+          );
+        }else{
+          urlLauncher(url);
+        }
       },
       child: Container(
         decoration: BoxDecoration(
@@ -321,4 +337,6 @@ class _ListingPageState extends State<ListingPage> {
       throw 'Could not launch $url';
     }
   }
+
+
 }
